@@ -1,1 +1,34 @@
 body{background-size: 25%;}
+
+.tap{background: url('https://i.postimg.cc/Qxf8V8Rp/1.jpg') no-repeat center;
+ background-size: 50%;
+ width: 400px;
+ height: 400px;
+ background-color: #518677;
+ border-radius: 50%;
+ margin: 50px;}
+
+button:active {
+  transform: scale(0.95);
+}
+
+div{text-align:center;}
+
+p{color:white;
+ font-size:50px;}
+
+
+
+
+.btn img {
+	background-position: center;
+    color: #56ce4d;
+    padding: 5px 6px;
+    text-align: left;
+    font-size: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100px;;
+    margin-right: 5px;
+}
