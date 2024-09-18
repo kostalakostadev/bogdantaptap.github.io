@@ -30,9 +30,6 @@ p{color:white;
     margin-right: 5px;
 }
 
-button {
-    -webkit-appearance: none;
-    border-radius: 0;
 button:active {
   transform: scale(0.95);
 }
