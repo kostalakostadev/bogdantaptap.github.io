@@ -12,9 +12,6 @@ background-color: #518677;
 border-radius: 50%;
 margin: 50px;}
 
-button:active {
-transform: scale(0.95);
-}
 
 div{text-align:center;}
 
@@ -35,4 +32,8 @@ flex-wrap: wrap;
 align-items: center;
 width: 100px;
 margin-right: 5px;
+}
+
+button:active {
+transform: scale(0.95);
 }
