@@ -1,15 +1,15 @@
-body{background-size: 25%;}
+body{background-size: 50%;}
 
 .tap{background: url('https://i.postimg.cc/Qxf8V8Rp/1.jpg') no-repeat center;
  background-size: 50%;
- width: 400px;
- height: 400px;
+ width: 200px;
+ height: 200px;
  background-color: #518677;
  border-radius: 50%;
  margin: 50px;}
 
 button:active {
-  transform: scale(0.95);
+  transform: scale(0.50);
 }
 button {
     -webkit-appearance: none;
@@ -18,7 +18,7 @@ button {
 div{text-align:center;}
 
 p{color:white;
- font-size:50px;}
+ font-size:35px;}
 
 
 
@@ -32,6 +32,6 @@ p{color:white;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 100px;;
+    width: 500px;;
     margin-right: 5px;
 }
