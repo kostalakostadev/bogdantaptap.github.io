@@ -43,7 +43,8 @@ transform: scale(0.95);
 .buttons {
     background-color: rgb(112, 112, 112, 1);
     overflow: hidden;
-    position: fixed;
+    position: relative;
+    left: -75px;
     bottom: 0;
     width: 200%;
     text-align: center;
