@@ -32,6 +32,10 @@ align-items: center;
 width: 100px;
 margin-right: 5px;
 }
+.btn {
+color: rgb(60, 179, 113,1);
+
+}
 
 button:active {
 transform: scale(0.95);
