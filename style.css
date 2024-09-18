@@ -1,35 +1,38 @@
 body{background-size: 50%;}
 
 .tap{background: url('https://i.postimg.cc/Qxf8V8Rp/1.jpg') no-repeat center;
- background-size: 25%;
- width: 200px;
- height: 200px;
- background-color: #518677;
- border-radius: 50%;
- margin: 50px;}
+background-size: 25%;
+width: 200px;
+height: 200px;
+background-color: #518677;
+border-radius: 50%;
+margin: 50px;}
 
 }
 div{text-align:center;}
 
 p{color:white;
- font-size:35px;}
+font-size:35px;}
 
 
 
 
 .btn img {
-	background-position: center;
-    color: #56ce4d;
-    padding: 5px 6px;
-    text-align: left;
-    font-size: 30px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 250px;;
-    margin-right: 5px;
+background-position: center;
+color: #56ce4d;
+padding: 5px 6px;
+text-align: left;
+font-size: 30px;
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+width: 250px;;
+margin-right: 5px;
 }
-
+button {
+-webkit-appearance: none;
+border-radius: 0;
+}
 button:active {
-  transform: scale(0.95);
+transform: scale(0.95);
 }
