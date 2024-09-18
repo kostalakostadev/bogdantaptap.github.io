@@ -8,9 +8,6 @@ body{background-size: 50%;}
  border-radius: 50%;
  margin: 50px;}
 
-button {
-    -webkit-appearance: none;
-    border-radius: 0;
 }
 div{text-align:center;}
 
@@ -33,6 +30,9 @@ p{color:white;
     margin-right: 5px;
 }
 
+button {
+    -webkit-appearance: none;
+    border-radius: 0;
 button:active {
   transform: scale(0.95);
 }
