@@ -29,10 +29,10 @@ p{color:white;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    width: 500px;;
+    width: 250px;;
     margin-right: 5px;
 }
 
 button:active {
-  transform: scale(0.50);
+  transform: scale(0.95);
 }
