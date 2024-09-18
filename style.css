@@ -36,6 +36,23 @@ margin-right: 5px;
 background-color: rgb(60, 179, 113,1);
 
 }
+.buttons {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.buttons button {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
 
 button:active {
 transform: scale(0.95);
