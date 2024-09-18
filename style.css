@@ -46,6 +46,7 @@ transform: scale(0.95);
     bottom: 0;
     width: 100%;
     text-align: center;
+    height: 10%;
 }
 
 .buttons button {
