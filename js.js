@@ -39,8 +39,8 @@ function melontap(){
         let newElem = document.createElement('img');
         ml.append(newElem);
         newElem.src = 'https://i.postimg.cc/PLYdp3hG/melon.jpg';
-
-
+        
+        
     }
     else{
         alert("У вас недостаточно БогданКоина");
@@ -59,13 +59,13 @@ function tertap(){
         let newElem = document.createElement('img');
         ml.append(newElem);
         newElem.src = 'https://i.postimg.cc/gXKd4xnN/ter.jpg';
-
-
+        
+        
     }
     else{
         alert("У вас недостаточно БогданКоина");
     }
-
+    
 }
 function stolbtap(){
     if (values>=stolbcost){
@@ -80,8 +80,8 @@ function stolbtap(){
         let newElem = document.createElement('img');
         ml.append(newElem);
         newElem.src = 'https://i.postimg.cc/ZBm4r8KW/stolb.jpg';
-
-
+        
+        
     }
     else{
         alert("У вас недостаточно БогданКоина");
@@ -100,12 +100,12 @@ function gnomtap(){
         let newElem = document.createElement('img');
         ml.append(newElem);
         newElem.src = 'https://i.postimg.cc/PCLXhfR5/gnom.jpg';
-
-
+        
+        
     }
     else{
         alert("У вас недостаточно БогданКоина");
     }
-
+    
 }
 let timerId = setInterval(() => autotap(), 1000);
