@@ -19,11 +19,11 @@ let stage = 1;
 
 function tap(){
     values++;
-    document.getElementById("value").innerText = var(--tg-viewport-height);
+    document.getElementById("value").innerText = values;
 }
 function autotap(){
     values=values+hour;
-    document.getElementById("value").innerText = var(--tg-viewport-height);
+    document.getElementById("value").innerText = values;
 
 }
 function toMine(){
