@@ -23,7 +23,7 @@ function tap(){
 }
 function autotap(){
     values=values+hour;
-    document.getElementById("value").innerText = values;
+    document.getElementById("value").innerText = var(--tg-viewport-height);
 
 }
 function toMine(){
