@@ -49,7 +49,7 @@ transform: scale(0.95);
     width: 100%;
     text-align: center;
     height: 7%;
-    border-radius: 10%;
+    border-radius: 5px;
 }
 
 .buttons button {
@@ -61,6 +61,6 @@ transform: scale(0.95);
     text-decoration: none;
     font-size: 17px;
     width: 45%;
-    border-radius: 10%;
+    border-radius: 5px;;
 }
 
