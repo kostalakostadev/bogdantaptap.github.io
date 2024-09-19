@@ -19,7 +19,7 @@ let stage = 1;
 
 function tap(){
     values++;
-    document.getElementById("value").innerText = values;
+    document.getElementById("value").innerText = var(--tg-viewport-height);
 }
 function autotap(){
     values=values+hour;
