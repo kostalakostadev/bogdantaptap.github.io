@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
+		<link type="text/css" href="style.css?<?php echo time();?>" rel="stylesheet"/>
+		<script src="https://telegram.org/js/telegram-web-app.js"></script>
+		<script src="./js.js"></script>
 		<meta charset="UTF-8">
 		<meta name="viewport"
 			  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>BogdanCoin</title>
 	</head>
-	<body background="https://i.postimg.cc/WbvF01WC/fon.jpg" oncopy="return false">
-		<div class="taptap">
-			<button class="tap" onclick='tap()' id='btap'></button>
-			<p id='value'>10 (в секунду 0)</p>
+	<body oncopy="return false">
+		<div class="blocksTop">
+			<p id="earn">Прибыль в секунду: 0</p>
 		</div>
 
 
-		<div class="cards" style="display:none;">
-			<button class="btn" id="melon" onclick='melontap()'><img src="https://i.postimg.cc/PLYdp3hG/melon.jpg" id='melonimg'>Арбузный бизнес<br/>Приносит: 0 в секунду<br/>Стоит:100</button>
-			<button class="btn" id="ter" onclick='tertap()'><img src="https://i.postimg.cc/gXKd4xnN/ter.jpg" id='terimg'>Террария <br/>Приносит: 0 в секунду<br/>Стоит:500</button>
-			<button class="btn" id="stolb" onclick='stolbtap()'><img src="https://i.postimg.cc/ZBm4r8KW/stolb.jpg" id='stolbimg'>Столб фарм<br/>Приносит: 0 в секунду<br/>Стоит:1488</button>
-			<button class="btn" id="gnom" onclick='gnomtap()'><img src="https://i.postimg.cc/PCLXhfR5/gnom.jpg" id='gnomimg'>Гном фарм <br/>Приносит: 0 в секунду<br/>Стоит:52000</button>
+
+		<div class="mainBlocks">
+			<p id='value'>0</p>
+			<div id="taptap">
+				<button class="tap" onclick='tap()' id='btap'></button>
+			</div>
+			<div id="cards" style="display:none;">
+				<button class="card" id="melon" onclick='melontap()'><img src="https://i.postimg.cc/PLYdp3hG/melon.jpg" id='melonimg'>Арбузный бизнес<br/>Приносит: 0 в секунду<br/>Стоит:100</button>
+				<button class="card" id="ter" onclick='tertap()'><img src="https://i.postimg.cc/gXKd4xnN/ter.jpg" id='terimg'>Террария <br/>Приносит: 0 в секунду<br/>Стоит:500</button>
+				<button class="card" id="stolb" onclick='stolbtap()'><img src="https://i.postimg.cc/ZBm4r8KW/stolb.jpg" id='stolbimg'>Столб фарм<br/>Приносит: 0 в секунду<br/>Стоит:1488</button>
+				<button class="card" id="gnom" onclick='gnomtap()'><img src="https://i.postimg.cc/PCLXhfR5/gnom.jpg" id='gnomimg'>Гном фарм <br/>Приносит: 0 в секунду<br/>Стоит:52000</button>
+			</div>
 		</div>
 
 
-		<div class="buttons">
-			<button>Тап</button>
-			<button>Прокачка</button>
+
+		<div class="buttonsBottom">
+			<button style="color: rgb(255, 255, 255, 1);background-color: rgb(34, 34, 34, 1)" onclick="toTap()" id="tapBtn">Тап</button>
+			<button onclick="toMine()" id="mineBtn">Бизнес</button>
+			<button>Друзья</button>
+			<button>AirDrop</button>
 		</div>
 	</body>
 </html>
 
-
-<link type="text/css" href="style.css?<?php echo time();?>" rel="stylesheet"/>
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
-<script src="./js.js"></script>
