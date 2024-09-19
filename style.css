@@ -53,7 +53,7 @@ transform: scale(0.95);
 }
 
 .buttons button {
-    margin: 10px 15px 10px;
+    margin: 5px 7px 5px;
     float: left;
     display: block;
     color: rgb(87, 87, 87, 1);
@@ -62,5 +62,6 @@ transform: scale(0.95);
     font-size: 17px;
     width: 45%;
     border-radius: 5px;;
+    height:
 }
 
