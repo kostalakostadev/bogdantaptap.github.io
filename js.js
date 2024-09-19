@@ -14,6 +14,8 @@ let gnomcost = 52000;
 let gnomprin = 0;
 let stage = 1;
 
+let tg = window.Telegram.WebApp;
+tg.expand()
 
 
 
