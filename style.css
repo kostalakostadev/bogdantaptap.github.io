@@ -1,5 +1,6 @@
 body{background-color: rgb(34, 34, 34, 1);
-margin: 0px}
+margin: 0px;
+height: var(--tg-viewport-height)px;}
 
 div{text-align:center;}
 
@@ -27,7 +28,7 @@ p{font-family: Arial}
 
 .blocksTop{height: 50px;}
 
-.mainBlocks{height: 785px;
+.mainBlocks{height: 85%;
 border-radius: 20px 20px 0px 0px;
 background-color: rgb(45, 45, 45, 1);
 box-shadow: -0px -10px 50px orange;
@@ -35,8 +36,8 @@ box-shadow: -0px -10px 50px orange;
 
 .tap{background: url('https://i.postimg.cc/Qxf8V8Rp/1.jpg') no-repeat center;
 background-size: 50%;
-width: 400px;
-height: 400px;
+width: 370px;
+height: 370px;
 background-color: orange;
 border-radius: 50%;
 }
