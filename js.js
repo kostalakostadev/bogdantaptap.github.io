@@ -16,12 +16,12 @@ let stage = 1;
 
 let tg = window.Telegram.WebApp;
 tg.expand()
-
+let x = tg.viewportHeight;
 
 
 function tap(){
     values++;
-    document.getElementById("value").innerText = values;
+    document.getElementById("value").innerText = x;
 }
 function autotap(){
     values=values+hour;
