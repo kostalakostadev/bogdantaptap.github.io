@@ -18,6 +18,7 @@ let tg = window.Telegram.WebApp;
 tg.expand()
 let x = tg.viewportHeight;
 document.getElementById("bodys").style.height = x + "px";
+document.getElementById("mainBlocks").style.height = "70%";
 
 function tap(){
     values++;
