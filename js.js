@@ -14,8 +14,8 @@ let gnomcost = 52000;
 let gnomprin = 0;
 let stage = 1;
 
-let tg = window.Telegram.WebApp;
-tg.expand()
+
+
 
 function tap(){
     values++;
@@ -60,8 +60,8 @@ function melontap(){
     if (values>=meloncost){
         values=values-meloncost
         document.getElementById("value").innerText = values;
-        document.getElementById("earn").innerText = "Прибыль в секунду: "+hour;
         hour=hour+1*melonlvl;
+        document.getElementById("earn").innerText = "Прибыль в секунду: "+hour;
         melonprin=melonprin+1*melonlvl;
         melonlvl++;
         meloncost=Math.floor(meloncost+meloncost*0.9549);
@@ -81,8 +81,8 @@ function tertap(){
     if (values>=tercost){
         values=values-tercost
         document.getElementById("value").innerText = values;
-        document.getElementById("earn").innerText = "Прибыль в секунду: "+hour;
         hour=hour+10*terlvl;
+        document.getElementById("earn").innerText = "Прибыль в секунду: "+hour;
         terprin=terprin+10*terlvl;
         terlvl++;
         tercost=Math.floor(tercost+tercost*0.9586);
@@ -103,8 +103,8 @@ function stolbtap(){
     if (values>=stolbcost){
         values=values-stolbcost
         document.getElementById("value").innerText = values;
-        document.getElementById("earn").innerText = "Прибыль в секунду: "+hour;
         hour=hour+50*stolblvl;
+        document.getElementById("earn").innerText = "Прибыль в секунду: "+hour;
         stolbprin=stolbprin+50*stolblvl;
         stolblvl++;
         stolbcost=Math.floor(stolbcost+stolbcost*0.9571);
@@ -124,8 +124,8 @@ function gnomtap(){
     if (values>=gnomcost){
         values=values-gnomcost
         document.getElementById("value").innerText = values;
-        document.getElementById("earn").innerText = "Прибыль в секунду: "+hour;
         hour=hour+1000*gnomlvl;
+        document.getElementById("earn").innerText = "Прибыль в секунду: "+hour;
         gnomprin=gnomprin+1000*gnomlvl;
         gnomlvl++;
         gnomcost=Math.floor(gnomcost+gnomcost*0.9531);
