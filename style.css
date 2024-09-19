@@ -3,7 +3,7 @@ button {
 border-radius: 0;
 }
 body{background-size: 25%;
-margin: 1px}
+margin: 0px}
 
 .tap{background: url('https://i.postimg.cc/Qxf8V8Rp/1.jpg') no-repeat center;
 background-size: 50%;
@@ -46,12 +46,13 @@ transform: scale(0.95);
     overflow: hidden;
     position: absolute;
     bottom: 0px;
-    width: 100%;
+    width: 98%;
     text-align: center;
     height: 7%;
 }
 
 .buttons button {
+    margin: 1em;
     float: left;
     display: block;
     color: rgb(87, 87, 87, 1);
