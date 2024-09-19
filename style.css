@@ -46,7 +46,7 @@ transform: scale(0.95);
     overflow: hidden;
     position: absolute;
     bottom: 0px;
-    width: 98%;
+    width: 100%;
     text-align: center;
     height: 7%;
 }
