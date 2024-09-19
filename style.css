@@ -1,6 +1,6 @@
 body{background-color: rgb(34, 34, 34, 1);
 margin: 0px;
-height: var(--tg-viewport-stable-height, 100vh);}
+height: 100vh;}
 
 div{text-align:center;}
 
