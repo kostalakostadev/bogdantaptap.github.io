@@ -26,16 +26,6 @@ function autotap(){
     document.getElementById("value").innerText = values;
 
 }
-function toMine(){
-    document.getElementById("taptap").style.display = "none";
-    document.getElementById("cards").style.display = "block";
-
-    document.getElementById("tapBtn").style.color = "#646464";
-    document.getElementById("tapBtn").style.backgroundColor = "#3c3c3c";
-
-    document.getElementById("mineBtn").style.color = "#ffffff";
-    document.getElementById("mineBtn").style.backgroundColor = "#222222";
-}
 function toTap(){
     document.getElementById("taptap").style.display = "block";
     document.getElementById("cards").style.display = "none";
@@ -46,6 +36,20 @@ function toTap(){
     document.getElementById("tapBtn").style.color = "#ffffff";
     document.getElementById("tapBtn").style.backgroundColor = "#222222";
 
+    document.getElementById("scroll").style.overflowY = "hidden";
+
+}
+function toMine(){
+    document.getElementById("taptap").style.display = "none";
+    document.getElementById("cards").style.display = "block";
+
+    document.getElementById("tapBtn").style.color = "#646464";
+    document.getElementById("tapBtn").style.backgroundColor = "#3c3c3c";
+
+    document.getElementById("mineBtn").style.color = "#ffffff";
+    document.getElementById("mineBtn").style.backgroundColor = "#222222";
+
+    document.getElementById("scroll").style.overflowY = "scroll";
 }
 
 
