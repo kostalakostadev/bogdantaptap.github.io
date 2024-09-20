@@ -49,11 +49,7 @@ overflow-x:hidden;}
 #cards::-webkit-scrollbar-thumb {
 background: #888;
 border-radius: 5px;
-margin: 0 5%
-}
-#cards::-webkit-scrollbar {
-width: 10px;
-}
+margin: 0 5%}
 
 
 .card {
