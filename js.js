@@ -30,11 +30,13 @@ function toTap(){
     document.getElementById("taptap").style.display = "block";
     document.getElementById("cards").style.display = "none";
 
+    document.getElementById("mineBtn").style.backgroundImage = 'url("https://i.ibb.co/NrxDG4c/1.png)';
     document.getElementById("mineBtn").style.color = "#646464";
     document.getElementById("mineBtn").style.backgroundColor = "#3c3c3c";
 
     document.getElementById("tapBtn").style.color = "#ffffff";
     document.getElementById("tapBtn").style.backgroundColor = "#222222";
+    document.getElementById("tapBtn").style.backgroundImage = 'url("https://i.ibb.co/mXVwrFK/image.png")';
 
     document.getElementById("scroll").style.overflowY = "hidden";
 
@@ -45,7 +47,9 @@ function toMine(){
 
     document.getElementById("tapBtn").style.color = "#646464";
     document.getElementById("tapBtn").style.backgroundColor = "#3c3c3c";
+    document.getElementById("tapBtn").style.backgroundImage = 'url("https://i.ibb.co/hKTjXDF/image.png")';
 
+    document.getElementById("mineBtn").style.backgroundImage = 'url("https://i.ibb.co/N1sKrpY/2.png)';
     document.getElementById("mineBtn").style.color = "#ffffff";
     document.getElementById("mineBtn").style.backgroundColor = "#222222";
 
