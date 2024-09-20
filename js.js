@@ -14,12 +14,27 @@ let gnomcost = 52000;
 let gnomprin = 0;
 let stage = 1;
 
-
+document.ondragstart = noselect;
+document.onselectstart = noselect;
+document.oncontextmenu = noselect;
+function noselect() {return false;}
 
 
 function tap(){
     values++;
     document.getElementById("value").innerText = values;
+    document.getElementById("btap").disabled = true;
+    setTimeout(function() { document.getElementById("btap").disabled = false }, 100);
+    var PreviousDownTimeX = 0;
+    document.onkeydown = function ()
+    {
+    if (!PreviousDownTimeX) PreviousDownTimeX = new Date ().getTime (); else
+       {
+       var CurrentDownTimeX = new Date ().getTime ();
+       alert ('Клавиатура задействована через ' + (CurrentDownTimeX - PreviousDownTimeX) + ' мс после предыдущего нажатия.');
+       PreviousDownTimeX = CurrentDownTimeX;
+       }
+}
 }
 function autotap(){
     values=values+hour;
