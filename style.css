@@ -106,3 +106,15 @@ border-radius: 7px;
 height: 46px;
 border:none;
 }
+
+
+#tapBtn{background: url("https://i.ibb.co/mXVwrFK/image.png") no-repeat center;
+background-size: 50%;}
+#mineBtn{background: url("https://i.ibb.co/NrxDG4c/1.png") no-repeat center;
+background-size: 50%;}
+#skinsBtn{background: url("https://i.ibb.co/wLnznQW/image.png") no-repeat center;
+background-size: 50%;}
+#friendsBtn{background: url("https://i.ibb.co/9gfpBdf/image.png") no-repeat center;
+background-size: 50%;}
+#dropBtn{background: url("https://i.ibb.co/dKbq2GW/image.png") no-repeat center;
+background-size: 50%;}
