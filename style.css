@@ -44,8 +44,16 @@ background-color: orange;
 border-radius: 50%;
 }
 
-
-
+#cards{overflow: scroll;
+overflow-x:hidden;}
+#cards::-webkit-scrollbar-thumb {
+background: #888;
+border-radius: 5px;
+margin: 0 5%
+}
+#cards::-webkit-scrollbar {
+width: 10px;
+}
 
 
 .card {
@@ -72,29 +80,29 @@ margin-right: 5px;
 
 
 .buttonsBottom {
-    display: flex;
-    justify-content: space-around;
-    background-color: rgb(60, 60, 60, 1);
-    overflow: hidden;
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    text-align: center;
-    height: 7%;
-    border-radius: 5px;
+display: flex;
+justify-content: space-around;
+background-color: rgb(60, 60, 60, 1);
+overflow: hidden;
+position: absolute;
+bottom: 0px;
+width: 100%;
+text-align: center;
+height: 7%;
+border-radius: 5px;
 }
 
 .buttonsBottom button {
-    font-family: Arial;
-    background-color: #3c3c3c;
-    margin: 5px 6px 10px;
-    float: left;
-    color: rgb(100, 100, 100, 1);
-    text-align: center;
-    text-decoration: none;
-    font-size: 17px;
-    width: 100%;
-    border-radius: 7px;
-    height: 46px;
-    border:none;
+font-family: Arial;
+background-color: #3c3c3c;
+margin: 5px 6px 10px;
+float: left;
+color: rgb(100, 100, 100, 1);
+text-align: center;
+text-decoration: none;
+font-size: 17px;
+width: 100%;
+border-radius: 7px;
+height: 46px;
+border:none;
 }
