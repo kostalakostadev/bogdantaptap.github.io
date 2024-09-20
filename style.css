@@ -28,11 +28,11 @@ p{font-family: Arial}
 
 .blocksTop{height: 50px;}
 
-.mainBlocks{height: 89%;
+#mainBlocks{height: 89%;
 border-radius: 20px 20px 0px 0px;
 background-color: rgb(45, 45, 45, 1);
 box-shadow: -0px -10px 50px orange;
-border-width: 2px;
+border-width: 5px;
 border-top-style: solid;
 border-color: orange;}
 
@@ -44,12 +44,15 @@ background-color: orange;
 border-radius: 50%;
 }
 
-#cards{overflow: scroll;
-overflow-x:hidden;}
-#cards::-webkit-scrollbar-thumb {
-background: #888;
-border-radius: 5px;
-margin: 0 5%}
+#scroll{overflow: scroll;
+overflow-x:hidden;
+height: 77%;
+bottom: 0;}
+
+div::-webkit-scrollbar{
+width: 0px;
+}
+
 
 
 .card {
