@@ -1,4 +1,4 @@
-let values = 1000000;
+let values = 0;
 let hour = 0;
 let melonlvl = 1;
 let meloncost = 100;
