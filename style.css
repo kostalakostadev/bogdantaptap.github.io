@@ -32,7 +32,7 @@ margin: 1% 0}
 #mainBlocks{height: 87.5%;
 border-radius: 20px 20px 0px 0px;
 background-color: var(--tg-theme-bg-color);
-box-shadow: -0px -10px 50px orange;
+box-shadow: -0px -10px 50px var(--tg-theme-button-color);
 border-width: 5px;
 border-top-style: solid;
 border-color: orange;}
@@ -41,7 +41,7 @@ border-color: orange;}
 background-size: 50%;
 width: 370px;
 height: 370px;
-background-color: orange;
+background-color: var(--tg-theme-button-color);
 border-radius: 50%;
 margin-top: 20%;
 }
@@ -103,7 +103,7 @@ margin-top: 50%;
 .buttonsBottom {
 display: flex;
 justify-content: space-around;
-background-color: var(--tg-theme-button-color);
+background-color: var(--tg-theme-section-separator-color);
 overflow: hidden;
 position: absolute;
 bottom: 0px;
