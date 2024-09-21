@@ -103,7 +103,7 @@ margin-top: 50%;
 .buttonsBottom {
 display: flex;
 justify-content: space-around;
-background-color: var(--tg-theme-section-separator-color);
+background-color: var(--tg-theme-button-color);
 overflow: hidden;
 position: absolute;
 bottom: 0px;
