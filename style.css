@@ -35,7 +35,7 @@ background-color: var(--tg-theme-bg-color);
 box-shadow: -0px -10px 50px var(--tg-theme-button-color);
 border-width: 5px;
 border-top-style: solid;
-border-color: orange;}
+border-color: var(--tg-theme-secondary-bg-color);}
 
 #btap{background: url('img/Skins/defaultSkin.jpg') no-repeat center;
 background-size: 50%;
