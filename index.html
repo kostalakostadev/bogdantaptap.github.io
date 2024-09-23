@@ -20,21 +20,23 @@
 		<div id="mainBlocks">
 			<p id='value'>0</p>
 			<div id="scroll" style="overflow-y:hidden;">
+
 				<div id="taptap" >
 					<button onclick='tap()' id='btap'></button>
 				</div>
+				<button style="display:none;" onclick='fingers()' class='bfinger' id="finger"><p>Пальцы</p><img src="img/More/one.png" id="fingerimg"><p id="fingers">Cтоит:100</p></button>
 				<div id="cards" style="display:none;">
-					<button class="card" id="melon" onclick='melontap()'><p>Арбузный бизнес</p><img src="img/Mine/melonMine.jpg" id='melonimg'><p id="melonText">Приносит: 0 в секунду<br/>Стоит:100</p></button>
-					<button class="card" id="ter" onclick='tertap()'><p>Террария</p><img src="img/Mine/terMine.jpeg" id='terimg'><p id="terText">Приносит: 0 в секунду<br/>Стоит:500</p></button>
-					<button class="card" id="stolb" onclick='stolbtap()'><p>Столб фарм</p><img src="img/Mine/stolbMine.jpg" id='stolbimg'><p id="stolbText">Приносит: 0 в секунду<br/>Стоит:1000</p></button>
-					<button class="card" id="gnom" onclick='gnomtap()'><p>Гном фарм</p><img src="img/Mine/gnomMine.jpeg" id='gnomimg'><p id="gnomText">Приносит: 0 в секунду<br/>Стоит:40000</p></button>
-					<button class="card" id="anapa" onclick='anapatap()'><p>Анапа бизнес</p><img src="img/Mine/anapaMine.jpeg" id='anapaimg'><p id="anapaText">Приносит: 0 в секунду<br/>Стоит:45000</p></button>
+					<button class="card" id="melon" onclick='melontap()'><p>Арбузный бизнес</p><img src="img/Mine/melonMine.jpg" id='melonimg'><p id="melonText">Уровень: 0<br/>Стоит:100</p></button>
+					<button class="card" id="ter" onclick='tertap()'><p>Террария</p><img src="img/Mine/terMine.jpeg" id='terimg'><p id="terText">Уровень: 0<br/>Стоит:500</p></button>
+					<button class="card" id="stolb" onclick='stolbtap()'><p>Столб фарм</p><img src="img/Mine/stolbMine.jpg" id='stolbimg'><p id="stolbText">Уровень: 0<br/>Стоит:1000</p></button>
+					<button class="card" id="gnom" onclick='gnomtap()'><p>Гном фарм</p><img src="img/Mine/gnomMine.jpeg" id='gnomimg'><p id="gnomText">Уровень: 0<br/>Стоит:40000</p></button>
+					<button class="card" id="anapa" onclick='anapatap()'><p>Анапа бизнес</p><img src="img/Mine/anapaMine.jpeg" id='anapaimg'><p id="anapaText">Уровень: 0<br/>Стоит:45000</p></button>
 
-					<button class="card" id="mum" onclick='mumtap()'><p>А меня мама, тепло одела!</p><img src="img/Mine/mumMine.jpg" id='mumimg'><p id="mumText">Приносит: 0 в секунду<br/>Стоит:50000</p></button>
+					<button class="card" id="mum" onclick='mumtap()'><p>Мамина одежда</p><img src="img/Mine/mumMine.jpg" id='mumimg'><p id="mumText">Уровень: 0<br/>Стоит:50000</p></button>
 
-					<button class="card" id="tapok" onclick='tapoktap()'><p>ТАПочный бизнес</p><img src="img/Mine/tapMine.jpg" id='tapokimg'><p id="tapokText">Приносит: 0 в секунду<br/>Стоит:30000</p></button>
+					<button class="card" id="tapok" onclick='tapoktap()'><p>ТАПочный бизнес</p><img src="img/Mine/tapMine.jpg" id='tapokimg'><p id="tapokText">Уровень: 0<br/>Стоит:30000</p></button>
 
-					<button class="card" id="grand" onclick='grandtap()'><p>Старичковый бизнес</p><img src="img/Mine/grandMine.jpg" id='grandimg'><p id="grandText">Приносит: 0 в секунду<br/>Стоит:10000</p></button>
+					<button class="card" id="grand" onclick='grandtap()'><p>Старичковый бизнес</p><img src="img/Mine/grandMine.jpg" id='grandimg'><p id="grandText">Уровень: 0<br/>Стоит:10000</p></button>
 				</div>
 				<div id="skins" style="display:none;">
 					<p class="soon">Скоро...</p>
@@ -51,7 +53,7 @@
 
 
 		<div class="buttonsBottom">
-			<button onclick="toTap()" id="tapBtn"><br/><br/>Тап</button>
+			<button onclick="toTap()" id="tapBtn"><br/><br/>⠀Тап⠀</button>
 			<button onclick="toMine()" id="mineBtn"><br/><br/>Бизнес</button>
 			<button onclick="toSkins()" id="skinsBtn"><br/><br/>Скины</button>
 			<button onclick="toFriends()" id="friendsBtn"><br/><br/>Друзья</button>
