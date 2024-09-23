@@ -1,4 +1,4 @@
-let values = 100000000;
+let values = 0;
 let hour = 0;
 let fingerlvl = 1;
 
