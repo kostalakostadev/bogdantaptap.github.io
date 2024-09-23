@@ -1,37 +1,30 @@
-let values = 0;
+let values = 100000000;
 let hour = 0;
+let fingerlvl = 1;
 
-let melonlvl = 1;
+let melonlvl = 0;
 let meloncost = 100;
-let melonprin = 0;
 
-let terlvl = 1;
+let terlvl = 0;
 let tercost = 500;
-let terprin = 0;
 
-let stolblvl = 1;
+let stolblvl = 0;
 let stolbcost = 1000;
-let stolbprin = 0;
 
-let gnomlvl = 1;
+let gnomlvl = 0;
 let gnomcost = 40000;
-let gnomprin = 0;
 
-let anapalvl = 1;
+let anapalvl = 0;
 let anapacost = 45000;
-let anapaprin = 0;
 
-let mumlvl = 1;
+let mumlvl = 0;
 let mumcost = 50000;
-let mumprin = 0;
 
-let tapoklvl = 1;
+let tapoklvl = 0;
 let tapokcost = 30000;
-let tapokprin = 0;
 
-let grandlvl = 1;
+let grandlvl = 0;
 let grandcost = 10000;
-let grandprin = 0;
 
 
 document.ondragstart = noselect;
@@ -41,7 +34,7 @@ function noselect() {return false;}
 
 
 function tap(){
-    values++;
+    values=values+fingerlvl;
     document.getElementById("value").innerText = values;
     document.getElementById("btap").disabled = true;
     setTimeout(function() { document.getElementById("btap").disabled = false }, 100);
@@ -50,9 +43,50 @@ function tap(){
 function autotap(){
     values=values+hour;
     document.getElementById("value").innerText = values;
+}
+function fingers(){
+    if (fingerlvl==1){
+        if (values>=100){
+            document.getElementById("fingers").innerText = "Стоит: 500";
+            document.getElementById("fingerimg").src = 'img/More/two.png';
+            fingerlvl = 2;
+            return;
+        }
+    }
+    else if (fingerlvl==2){
+        if (values>=500){
+            document.getElementById("fingers").innerText = "Стоит: 5000";
+            document.getElementById("fingerimg").src = 'img/More/four.png';
+            fingerlvl = 4;
+            return;
+        }
+    }
+    else if (fingerlvl==4){
+        if (values>=5000){
+           document.getElementById("fingers").innerText = "Стоит: 10000";
+            document.getElementById("fingerimg").src = 'img/More/eight.png';
+            fingerlvl = 8;
+            return;
+        }
+    }
+    else if (fingerlvl==8){
+        if (values>=10000){
+            document.getElementById("fingers").innerText = "Максимум!";
+            document.getElementById("fingerimg").src = 'img/More/ten.avif';
+            fingerlvl = 10;
+            return;
+        }
+    }
+    else if (fingerlvl==10){
+        alert("Тут больше нечего прокачивать");
+        return;
+    }
+    alert("У вас недостаточно БогданКоина");
 
 }
+
 function toTap(){
+    document.getElementById("finger").style.display = "none";
     document.getElementById("cards").style.display = "none";
     document.getElementById("skins").style.display = "none";
     document.getElementById("friends").style.display = "none";
@@ -75,6 +109,7 @@ function toTap(){
 
 }
 function toMine(){
+    document.getElementById("finger").style.display = "block";
     document.getElementById("taptap").style.display = "none";
     document.getElementById("skins").style.display = "none";
     document.getElementById("friends").style.display = "none";
@@ -96,6 +131,7 @@ function toMine(){
     document.getElementById("scroll").style.overflowY = "scroll";
 }
 function toSkins(){
+    document.getElementById("finger").style.display = "none";
     document.getElementById("taptap").style.display = "none";
     document.getElementById("friends").style.display = "none";
     document.getElementById("cards").style.display = "none";
@@ -114,9 +150,10 @@ function toSkins(){
     document.getElementById("skinsBtn").style.color = "#ffffff";
     document.getElementById("skinsBtn").style.backgroundImage = 'url("img/IconsBottom/skinsWhite.png")';
     document.getElementById("skins").style.display = "block";
-    document.getElementById("scroll").style.overflowY = "hidden";
+    document.getElementById("scroll").style.overflowY = "scroll";
 }
 function toFriends(){
+    document.getElementById("finger").style.display = "none";
     document.getElementById("taptap").style.display = "none";
     document.getElementById("skins").style.display = "none";
     document.getElementById("cards").style.display = "none";
@@ -138,6 +175,7 @@ function toFriends(){
     document.getElementById("scroll").style.overflowY = "hidden";
 }
 function toDrop(){
+    document.getElementById("finger").style.display = "none";
     document.getElementById("taptap").style.display = "none";
     document.getElementById("skins").style.display = "none";
     document.getElementById("cards").style.display = "none";
@@ -171,12 +209,11 @@ function melontap(){
     if (values>=meloncost){
         values=values-meloncost
         document.getElementById("value").innerText = values;
+        melonlvl++;
         hour=hour+1*melonlvl;
         document.getElementById("earn").innerText = "Прибыль в секунду: "+hour;
-        melonprin=melonprin+1*melonlvl;
-        melonlvl++;
         meloncost=Math.floor(meloncost+meloncost*1.1156);
-        document.getElementById("melonText").innerText = 'Приносит: '+melonprin+' в секунду\nСтоит: ' +meloncost;
+        document.getElementById("melonText").innerText = 'Уровень: '+melonlvl+'\nСтоит: ' +meloncost;
 
 
     }
@@ -188,12 +225,11 @@ function tertap(){
     if (values>=tercost){
         values=values-tercost
         document.getElementById("value").innerText = values;
+        terlvl++;
         hour=hour+6*terlvl;
         document.getElementById("earn").innerText = "Прибыль в секунду: "+hour;
-        terprin=terprin+6*terlvl;
-        terlvl++;
         tercost=Math.floor(tercost+tercost*0.9586);
-        document.getElementById("terText").innerText = 'Приносит: '+terprin+' в секунду\nСтоит: ' +tercost;
+        document.getElementById("terText").innerText = 'Уровень: '+terlvl+'\nСтоит: ' +tercost;
 
 
     }
@@ -206,12 +242,11 @@ function stolbtap(){
     if (values>=stolbcost){
         values=values-stolbcost
         document.getElementById("value").innerText = values;
+        stolblvl++;
         hour=hour+15*stolblvl;
         document.getElementById("earn").innerText = "Прибыль в секунду: "+hour;
-        stolbprin=stolbprin+15*stolblvl;
-        stolblvl++;
         stolbcost=Math.floor(stolbcost+stolbcost*0.8431);
-        document.getElementById("stolbText").innerText = 'Приносит: '+stolbprin+' в секунду\nСтоит: ' +stolbcost;
+        document.getElementById("stolbText").innerText = 'Уровень: '+stolblvl+'\nСтоит: ' +stolbcost;
 
 
     }
@@ -223,12 +258,11 @@ function gnomtap(){
     if (values>=gnomcost){
         values=values-gnomcost
         document.getElementById("value").innerText = values;
+        gnomlvl++;
         hour=hour+150*gnomlvl;
         document.getElementById("earn").innerText = "Прибыль в секунду: "+hour;
-        gnomprin=gnomprin+150*gnomlvl;
-        gnomlvl++;
         gnomcost=Math.floor(gnomcost+gnomcost*0.7961);
-        document.getElementById("gnomText").innerText = 'Приносит: '+gnomprin+' в секунду\nСтоит: ' +gnomcost;
+        document.getElementById("gnomText").innerText = 'Уровень: '+gnomlvl+'\nСтоит: ' +gnomcost;
 
     }
     else{
@@ -240,12 +274,11 @@ function anapatap(){
     if (values>=anapacost){
         values=values-anapacost
         document.getElementById("value").innerText = values;
+        anapalvl++;
         hour=hour+510*anapalvl;
         document.getElementById("earn").innerText = "Прибыль в секунду: "+hour;
-        anapaprin=anapaprin+510*anapalvl;
-        anapalvl++;
         anapacost=Math.floor(anapacost+anapacost*0.6489);
-        document.getElementById("anapaText").innerText = 'Приносит: '+anapaprin+' в секунду\nСтоит: ' +anapacost;
+        document.getElementById("anapaText").innerText = 'Уровень: '+anapalvl+'\nСтоит: ' +anapacost;
 
     }
     else{
@@ -257,12 +290,11 @@ function mumtap(){
     if (values>=mumcost){
         values=values-mumcost
         document.getElementById("value").innerText = values;
+        mumlvl++;
         hour=hour+700*mumlvl;
         document.getElementById("earn").innerText = "Прибыль в секунду: "+hour;
-        mumprin=mumprin+700*mumlvl;
-        mumlvl++;
         mumcost=Math.floor(mumcost+mumcost*0.4057);
-        document.getElementById("mumText").innerText = 'Приносит: '+mumprin+' в секунду\nСтоит: ' +mumcost;
+        document.getElementById("mumText").innerText = 'Уровень: '+mumlvl+'\nСтоит: ' +mumcost;
 
     }
     else{
@@ -274,12 +306,11 @@ function tapoktap(){
     if (values>=tapokcost){
         values=values-tapokcost
         document.getElementById("value").innerText = values;
+        tapoklvl++;
         hour=hour+350*tapoklvl;
         document.getElementById("earn").innerText = "Прибыль в секунду: "+hour;
-        tapokprin=tapokprin+350*mumlvl;
-        tapoklvl++;
         tapokcost=Math.floor(tapokcost+tapokcost*0.7616);
-        document.getElementById("tapokText").innerText = 'Приносит: '+tapokprin+' в секунду\nСтоит: ' +tapokcost;
+        document.getElementById("tapokText").innerText = 'Уровень: '+tapoklvl+'\nСтоит: ' +tapokcost;
 
     }
     else{
@@ -291,12 +322,11 @@ function grandtap(){
     if (values>=grandcost){
         values=values-grandcost
         document.getElementById("value").innerText = values;
+        grandlvl++;
         hour=hour+50*grandlvl;
         document.getElementById("earn").innerText = "Прибыль в секунду: "+hour;
-        grandprin=grandprin+50*grandlvl;
-        grandlvl++;
         grandcost=Math.floor(grandcost+grandcost*0.4057);
-        document.getElementById("grandText").innerText = 'Приносит: '+grandprin+' в секунду\nСтоит: ' +grandcost;
+        document.getElementById("grandText").innerText = 'Уровень: '+grandlvl+'\nСтоит: ' +grandcost;
 
     }
     else{
