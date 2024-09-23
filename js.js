@@ -1,5 +1,6 @@
 let values = 0;
 let hour = 0;
+
 let melonlvl = 1;
 let meloncost = 100;
 let melonprin = 0;
@@ -32,7 +33,6 @@ let grandlvl = 1;
 let grandcost = 10000;
 let grandprin = 0;
 
-let stage = 1;
 
 document.ondragstart = noselect;
 document.onselectstart = noselect;
@@ -45,17 +45,8 @@ function tap(){
     document.getElementById("value").innerText = values;
     document.getElementById("btap").disabled = true;
     setTimeout(function() { document.getElementById("btap").disabled = false }, 100);
-    var PreviousDownTimeX = 0;
-    document.onkeydown = function ()
-    {
-    if (!PreviousDownTimeX) PreviousDownTimeX = new Date ().getTime (); else
-       {
-       var CurrentDownTimeX = new Date ().getTime ();
-       alert ('Клавиатура задействована через ' + (CurrentDownTimeX - PreviousDownTimeX) + ' мс после предыдущего нажатия.');
-       PreviousDownTimeX = CurrentDownTimeX;
-       }
 }
-}
+
 function autotap(){
     values=values+hour;
     document.getElementById("value").innerText = values;
