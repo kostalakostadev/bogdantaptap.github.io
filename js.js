@@ -1,4 +1,4 @@
-let values = 100;
+let values = 50;
 let hour = 0;
 let fingerlvl = 1;
 
