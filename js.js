@@ -1,4 +1,4 @@
-let values = 0;
+let values = 100000000;
 let hour = 0;
 let fingerlvl = 1;
 
@@ -49,6 +49,7 @@ function fingers(){
         if (values>=100){
             document.getElementById("fingers").innerText = "Стоит: 500";
             document.getElementById("fingerimg").src = 'img/More/two.png';
+            values = values - 100;
             fingerlvl = 2;
             return;
         }
@@ -57,6 +58,7 @@ function fingers(){
         if (values>=500){
             document.getElementById("fingers").innerText = "Стоит: 5000";
             document.getElementById("fingerimg").src = 'img/More/four.png';
+            values = values - 500;
             fingerlvl = 4;
             return;
         }
@@ -65,6 +67,7 @@ function fingers(){
         if (values>=5000){
            document.getElementById("fingers").innerText = "Стоит: 10000";
             document.getElementById("fingerimg").src = 'img/More/eight.png';
+            values = values - 5000;
             fingerlvl = 8;
             return;
         }
@@ -73,6 +76,7 @@ function fingers(){
         if (values>=10000){
             document.getElementById("fingers").innerText = "Максимум!";
             document.getElementById("fingerimg").src = 'img/More/ten.avif';
+            values = values - 10000;
             fingerlvl = 10;
             return;
         }
