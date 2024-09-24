@@ -93,7 +93,7 @@ function fingers(){
     }
     else if (fingerlvl==4){
         if (values>=5000){
-           document.getElementById("fingers").innerText = "Стоит: 10000";
+           document.getElementById("fingers").innerText = "Стоит: 50000";
             document.getElementById("fingerimg").src = 'img/More/eight.png';
             values = values - 5000;
             fingerlvl = 8;
