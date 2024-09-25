@@ -60,7 +60,6 @@ function noselect() {return false;}
 
 
 function tap(){
-    tg.showAlert("qq");
     values=values+fingerlvl;
     document.getElementById("value").innerText = values;
     document.getElementById("btap").disabled = true;
@@ -135,9 +134,7 @@ function fingers(){
     else if (fingerlvl==64){
         alert("Тут больше нечего прокачивать");
         return;
-    }
-    alert("У вас недостаточно БогданКоина");
-
+    tg.showAlert("У вас недостаточно БогданКоина");
 }
 
 function toTap(){
@@ -273,7 +270,7 @@ function melontap(){
 
     }
     else{
-        alert("У вас недостаточно БогданКоина");
+        tg.showAlert("У вас недостаточно БогданКоина");
     }
 }
 function tertap(){
@@ -289,7 +286,7 @@ function tertap(){
 
     }
     else{
-        alert("У вас недостаточно БогданКоина");
+        tg.showAlert("У вас недостаточно БогданКоина");
     }
 
 }
@@ -306,7 +303,7 @@ function stolbtap(){
 
     }
     else{
-        alert("У вас недостаточно БогданКоина");
+        tg.showAlert("У вас недостаточно БогданКоина");
     }
 }
 function gnomtap(){
@@ -321,7 +318,7 @@ function gnomtap(){
 
     }
     else{
-        alert("У вас недостаточно БогданКоина");
+        tg.showAlert("У вас недостаточно БогданКоина");
     }
 
 }
@@ -337,7 +334,7 @@ function anapatap(){
 
     }
     else{
-        alert("У вас недостаточно БогданКоина");
+        tg.showAlert("У вас недостаточно БогданКоина");
     }
 
 }
@@ -353,7 +350,7 @@ function mumtap(){
 
     }
     else{
-        alert("У вас недостаточно БогданКоина");
+        tg.showAlert("У вас недостаточно БогданКоина");
     }
 
 }
@@ -369,7 +366,7 @@ function tapoktap(){
 
     }
     else{
-        alert("У вас недостаточно БогданКоина");
+        tg.showAlert("У вас недостаточно БогданКоина");
     }
 
 }
@@ -385,7 +382,7 @@ function grandtap(){
 
     }
     else{
-        alert("У вас недостаточно БогданКоина");
+        tg.showAlert("У вас недостаточно БогданКоина");
     }
 
 }
@@ -401,7 +398,7 @@ function eatstap(){
 
     }
     else{
-        alert("У вас недостаточно БогданКоина");
+        tg.showAlert("У вас недостаточно БогданКоина");
     }
 
 }
@@ -417,7 +414,7 @@ function krapivatap(){
 
     }
     else{
-        alert("У вас недостаточно БогданКоина");
+        tg.showAlert("У вас недостаточно БогданКоина");
     }
 
 }
@@ -433,7 +430,7 @@ function halattap(){
 
     }
     else{
-        alert("У вас недостаточно БогданКоина");
+        tg.showAlert("У вас недостаточно БогданКоина");
     }
 
 }
@@ -449,7 +446,7 @@ function halattap(){
 //
 //    }
 //    else{
-//        alert("У вас недостаточно БогданКоина");
+//        tg.showAlert("У вас недостаточно БогданКоина");
 //    }
 //
 //}
@@ -482,7 +479,7 @@ function depresSkintap(){
         document.getElementById('tapBtn').click();
         }
         else{
-            alert("У вас недостаточно БогданКоина");
+            tg.showAlert("У вас недостаточно БогданКоина");
 
         }
     }
@@ -512,7 +509,7 @@ function trendySkintap(){
         document.getElementById('tapBtn').click();
         }
         else{
-            alert("У вас недостаточно БогданКоина");
+            tg.showAlert("У вас недостаточно БогданКоина");
 
         }
     }
@@ -542,7 +539,7 @@ function gnevSkintap(){
         document.getElementById('tapBtn').click();
         }
         else{
-            alert("У вас недостаточно БогданКоина");
+            tg.showAlert("У вас недостаточно БогданКоина");
 
         }
     }
@@ -572,7 +569,7 @@ function iSkintap(){
         document.getElementById('tapBtn').click();
         }
         else{
-            alert("У вас недостаточно БогданКоина");
+            tg.showAlert("У вас недостаточно БогданКоина");
 
         }
     }
@@ -602,7 +599,7 @@ function krestSkintap(){
         document.getElementById('tapBtn').click();
         }
         else{
-            alert("У вас недостаточно БогданКоина");
+            tg.showAlert("У вас недостаточно БогданКоина");
 
         }
     }
@@ -632,7 +629,7 @@ function norelaxSkintap(){
         document.getElementById('tapBtn').click();
         }
         else{
-            alert("У вас недостаточно БогданКоина");
+            tg.showAlert("У вас недостаточно БогданКоина");
 
         }
     }
@@ -662,7 +659,7 @@ function noseySkintap(){
             document.getElementById('tapBtn').click();
         }
         else{
-            alert("У вас недостаточно БогданКоина");
+            tg.showAlert("У вас недостаточно БогданКоина");
 
         }
     }
@@ -692,7 +689,7 @@ function svoSkintap(){
         document.getElementById('tapBtn').click();
         }
         else{
-            alert("У вас недостаточно БогданКоина");
+            tg.showAlert("У вас недостаточно БогданКоина");
 
         }
     }
@@ -722,7 +719,7 @@ function coolSkintap(){
         document.getElementById('tapBtn').click();
         }
         else{
-            alert("У вас недостаточно БогданКоина");
+            tg.showAlert("У вас недостаточно БогданКоина");
 
         }
     }
@@ -752,7 +749,7 @@ function finsniperSkintap(){
         document.getElementById('tapBtn').click();
         }
         else{
-            alert("У вас недостаточно БогданКоина");
+            tg.showAlert("У вас недостаточно БогданКоина");
 
         }
     }
@@ -782,7 +779,7 @@ function gulSkintap(){
         document.getElementById('tapBtn').click();
         }
         else{
-            alert("У вас недостаточно БогданКоина");
+            tg.showAlert("У вас недостаточно БогданКоина");
 
         }
     }
@@ -812,7 +809,7 @@ function stickSkintap(){
         document.getElementById('tapBtn').click();
         }
         else{
-            alert("У вас недостаточно БогданКоина");
+            tg.showAlert("У вас недостаточно БогданКоина");
 
         }
     }
@@ -842,7 +839,7 @@ function winterSkintap(){
         document.getElementById('tapBtn').click();
         }
         else{
-            alert("У вас недостаточно БогданКоина");
+            tg.showAlert("У вас недостаточно БогданКоина");
 
         }
     }
@@ -872,7 +869,7 @@ function wtfSkintap(){
         document.getElementById('tapBtn').click();
         }
         else{
-            alert("У вас недостаточно БогданКоина");
+            tg.showAlert("У вас недостаточно БогданКоина");
 
         }
     }
