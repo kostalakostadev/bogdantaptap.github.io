@@ -52,7 +52,7 @@ let winterSkin = false;
 let wtfSkin = false;
 
 tg = window.Telegram.WebApp;
-tg.showAlert(message["qq"]);
+tg.showAlert("qq");
 
 document.ondragstart = noselect;
 document.onselectstart = noselect;
