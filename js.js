@@ -1,4 +1,4 @@
-let values = 100;
+let values = 100000000;
 let hour = 0;
 let fingerlvl = 1;
 
@@ -51,7 +51,8 @@ let stickSkin = false;
 let winterSkin = false;
 let wtfSkin = false;
 
-
+tg = window.Telegram.WebApp;
+tg.showAlert(message["qq"]);
 
 document.ondragstart = noselect;
 document.onselectstart = noselect;
@@ -113,7 +114,7 @@ function fingers(){
     }
     else if (fingerlvl==16){
         if (values>=200000){
-            document.getElementById("fingers").innerText = "Максимум!";
+            document.getElementById("fingers").innerText = "Стоит: 500000";
             document.getElementById("fingerimg").src = 'img/More/32.jpg';
             values = values - 200000;
             fingerlvl = 32;
@@ -122,6 +123,16 @@ function fingers(){
         }
     }
     else if (fingerlvl==32){
+        if (values>=500000){
+            document.getElementById("fingers").innerText = "Максимум!";
+            document.getElementById("fingerimg").src = 'img/More/64.jpg';
+            values = values - 500000;
+            fingerlvl = 64;
+            document.getElementById("value").innerText = values;
+            return;
+        }
+    }
+    else if (fingerlvl==64){
         alert("Тут больше нечего прокачивать");
         return;
     }
@@ -461,6 +472,7 @@ function depresSkintap(){
     if (depresSkin==false){
         if (values>=10000){
             values=values-10000;
+            document.getElementById("value").innerText = values;
             depresSkin = true;
             document.getElementById("depresSkinText").innerText = "Используется";
             document.getElementById("depresSkin").style.borderColor = "green";
@@ -490,6 +502,7 @@ function trendySkintap(){
     if (trendySkin==false){
         if (values>=15000){
             values=values-15000;
+            document.getElementById("value").innerText = values;
             trendySkin = true;
             document.getElementById("trendySkinText").innerText = "Используется";
             document.getElementById("trendySkin").style.borderColor = "green";
@@ -519,6 +532,7 @@ function gnevSkintap(){
     if (gnevSkin==false){
         if (values>=20000){
             values=values-20000;
+            document.getElementById("value").innerText = values;
             gnevSkin = true;
             document.getElementById("gnevSkinText").innerText = "Используется";
             document.getElementById("gnevSkin").style.borderColor = "green";
@@ -548,6 +562,7 @@ function iSkintap(){
     if (iSkin==false){
         if (values>=20000){
             values=values-20000;
+            document.getElementById("value").innerText = values;
             iSkin = true;
             document.getElementById("iSkinText").innerText = "Используется";
             document.getElementById("iSkin").style.borderColor = "green";
@@ -577,6 +592,7 @@ function krestSkintap(){
     if (krestSkin==false){
         if (values>=20000){
             values=values-20000;
+            document.getElementById("value").innerText = values;
             krestSkin = true;
             document.getElementById("krestSkinText").innerText = "Используется";
             document.getElementById("krestSkin").style.borderColor = "green";
@@ -606,6 +622,7 @@ function norelaxSkintap(){
     if (norelaxSkin==false){
         if (values>=20000){
             values=values-20000;
+            document.getElementById("value").innerText = values;
             norelaxSkin = true;
             document.getElementById("norelaxSkinText").innerText = "Используется";
             document.getElementById("norelaxSkin").style.borderColor = "green";
@@ -635,6 +652,7 @@ function noseySkintap(){
     if (noseySkin==false){
         if (values>=20000){
             values=values-20000;
+            document.getElementById("value").innerText = values;
             noseySkin = true;
             document.getElementById("noseySkinText").innerText = "Используется";
             document.getElementById("noseySkin").style.borderColor = "green";
@@ -664,6 +682,7 @@ function svoSkintap(){
     if (svoSkin==false){
         if (values>=20000){
             values=values-20000;
+            document.getElementById("value").innerText = values;
             svoSkin = true;
             document.getElementById("svoSkinText").innerText = "Используется";
             document.getElementById("svoSkin").style.borderColor = "green";
@@ -693,6 +712,7 @@ function coolSkintap(){
     if (coolSkin==false){
         if (values>=50000){
             values=values-50000;
+            document.getElementById("value").innerText = values;
             coolSkin = true;
             document.getElementById("coolSkinText").innerText = "Используется";
             document.getElementById("coolSkin").style.borderColor = "green";
@@ -722,6 +742,7 @@ function finsniperSkintap(){
     if (finsniperSkin==false){
         if (values>=50000){
             values=values-50000;
+            document.getElementById("value").innerText = values;
             finsniperSkin = true;
             document.getElementById("finsniperSkinText").innerText = "Используется";
             document.getElementById("finsniperSkin").style.borderColor = "green";
@@ -751,6 +772,7 @@ function gulSkintap(){
     if (gulSkin==false){
         if (values>=50000){
             values=values-50000;
+            document.getElementById("value").innerText = values;
             gulSkin = true;
             document.getElementById("gulSkinText").innerText = "Используется";
             document.getElementById("gulSkin").style.borderColor = "green";
@@ -780,6 +802,7 @@ function stickSkintap(){
     if (stickSkin==false){
         if (values>=50000){
             values=values-50000;
+            document.getElementById("value").innerText = values;
             stickSkin = true;
             document.getElementById("stickSkinText").innerText = "Используется";
             document.getElementById("stickSkin").style.borderColor = "green";
@@ -809,6 +832,7 @@ function winterSkintap(){
     if (winterSkin==false){
         if (values>=50000){
             values=values-50000;
+            document.getElementById("value").innerText = values;
             winterSkin = true;
             document.getElementById("winterSkinText").innerText = "Используется";
             document.getElementById("winterSkin").style.borderColor = "green";
@@ -838,6 +862,7 @@ function wtfSkintap(){
     if (wtfSkin==false){
         if (values>=100000){
             values=values-100000;
+            document.getElementById("value").innerText = values;
             wtfSkin = true;
             document.getElementById("wtfSkinText").innerText = "Используется";
             document.getElementById("wtfSkin").style.borderColor = "green";
