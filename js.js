@@ -898,5 +898,5 @@ function wtfSkintap(){
 
 
 
-
+tg.expand()
 let timerId = setInterval(() => autotap(), 1000);
