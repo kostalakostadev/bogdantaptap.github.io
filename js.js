@@ -1,4 +1,4 @@
-let values = 100000000;
+let values = 0;
 let hour = 0;
 let fingerlvl = 1;
 
@@ -52,7 +52,6 @@ let winterSkin = false;
 let wtfSkin = false;
 
 tg = window.Telegram.WebApp;
-tg.showAlert("qq");
 
 document.ondragstart = noselect;
 document.onselectstart = noselect;
@@ -61,6 +60,7 @@ function noselect() {return false;}
 
 
 function tap(){
+    tg.showAlert("qq");
     values=values+fingerlvl;
     document.getElementById("value").innerText = values;
     document.getElementById("btap").disabled = true;
