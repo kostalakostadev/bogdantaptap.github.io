@@ -31,7 +31,7 @@ margin: 1% 0}
 
 #mainBlocks{height: 87.5%;
 border-radius: 20px 20px 0px 0px;
-background-color: var(--tg-theme-bg-color);
+background-color: #4b4b4b;
 box-shadow: -0px -10px 50px orange;
 border-width: 5px;
 border-top-style: solid;
@@ -165,7 +165,8 @@ background-position: top;}
 background-size: 50%;
 background-position: top;}
 
-.skin {height: 230px;
+.skin {height: 250px;
+weight: 150px;;
 color: #fff;
 border-radius: 15px;
 font-weight: 700;
@@ -185,4 +186,5 @@ border-radius: 25px;
 }
 .camon{background-color: rgb(160, 160, 160, 1)}
 .epic{background-color: rgb(200, 0, 185, 1);}
-.leg{background-color: rgb(255, 245, 98, 1);}
+.leg{background-color: rgb(255, 255, 0, 0.8);}
+.custom{background-color: rgb(255, 205, 0, 1);}
