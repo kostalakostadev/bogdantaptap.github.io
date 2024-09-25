@@ -52,7 +52,7 @@ let winterSkin = false;
 let wtfSkin = false;
 
 tg = window.Telegram.WebApp;
-
+tg.disableVerticalSwipes()
 document.ondragstart = noselect;
 document.onselectstart = noselect;
 document.oncontextmenu = noselect;
