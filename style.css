@@ -1,10 +1,10 @@
-body{background-color: var(--tg-theme-secondary-bg-color);
+body{background-color: rgba(0, 0, 0, 1);
 margin: 0;
 height: calc(var(--tg-viewport-stable-height) - 3vh);}
 
 div{text-align:center;}
 
-p{color: var(--tg-theme-text-color);}
+p{color: white;}
 
 button {
 -webkit-appearance: none;
@@ -31,7 +31,7 @@ margin: 1% 0}
 
 #mainBlocks{height: 87.5%;
 border-radius: 20px 20px 0px 0px;
-background-color: var(--tg-theme-section-separator-color);
+background-color: rgba(10, 10, 10, 1);
 box-shadow: -0px -10px 50px orange;
 border-width: 5px;
 border-top-style: solid;
@@ -122,7 +122,7 @@ margin-top: 50%;
 .buttonsBottom {
 display: flex;
 justify-content: space-around;
-background-color: var(--tg-theme-section-separator-color);
+background-color: rgba(20, 20, 20, 1);
 overflow: hidden;
 position: absolute;
 bottom: 0px;
