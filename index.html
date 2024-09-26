@@ -20,7 +20,6 @@
 		<div id="mainBlocks">
 			<p id='value'>0</p>
 			<div id="scroll" style="overflow-y:hidden;">
-
 				<div id="taptap" >
 					<button onclick='tap()' id='btap'></button>
 				</div>
@@ -39,7 +38,9 @@
 					<button class="card" id="halat" onclick='halattap()'><p>Халатный бизнес</p><img src="img/Mine/halatMine.jpg" id='halatimg'><p id="halatText">Уровень: 0<br/>Стоит:1000</p></button>
 				</div>
 				<div id="skins" style="display:none;">
-
+					<button id="bogdanSkinsBtn" onclick="bogdanSkins()" class="skinsBtn" style="color: #fff;">Богданчики</button>
+					<button id="customSkinsBtn" onclick="customSkins()" class="skinsBtn">Кастом</button>
+					<div id="bogdanSkins">
 						<button class="skin camon" onclick='classicSkintap()' id='classicSkin' style="border-color: green;border-width: 5px;"><p>Классический</p><img src="img/Skins/classic.png"><p id="classicSkinText">Используется</p></button>
 						<button class="skin camon" onclick='depresSkintap()' id='depresSkin' style="border-color: red;border-width: 5px;"><p>Депрессивный</p><img src="img/Skins/depressiveCamon.png"><p id="depresSkinText">Стоит: 10000</p></button>
 						<button class="skin camon" onclick='trendySkintap()' id='trendySkin' style="border-color: red;border-width: 5px;"><p>Модный</p><img src="img/Skins/trandyCamon.png"><p id="trendySkinText">Стоит: 15000</p></button>
@@ -54,8 +55,10 @@
 						<button class="skin leg" onclick='gulSkintap()' id='gulSkin' style="border-color: red;border-width: 5px;"><p>Гуль</p><img src="img/Skins/gulLeg.png"><p id="gulSkinText">Стоит: 50000</p></button>
 						<button class="skin leg" onclick='stickSkintap()' id='stickSkin' style="border-color: red;border-width: 5px;"><p>С палочкой</p><img src="img/Skins/stickLeg.png"><p id="stickSkinText">Стоит: 50000</p></button>
 						<button class="skin leg" onclick='winterSkintap()' id='winterSkin' style="border-color: red;border-width: 5px;"><p>Зимний</p><img src="img/Skins/winterLeg.png"><p id="winterSkinText">Стоит: 50000</p></button>
+					</div>
+					<div id="customSkins" style="display:none;">
 						<button class="skin custom" onclick='wtfSkintap()' id='wtfSkin' style="border-color: red;border-width: 5px;"><p>WTF</p><img src="img/Skins/wtfLeg.png"><p id="wtfSkinText">Стоит: 100000</p></button>
-
+					</div>
 				</div>
 				<div id="friends" style="display:none;">
 					<p class="soon">Скоро...</p>
