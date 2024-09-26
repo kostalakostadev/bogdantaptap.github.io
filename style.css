@@ -64,7 +64,7 @@ width: 40%;}
 
 #scroll{overflow: scroll;
 overflow-x:hidden;
-height: 85%;
+height: 83%;
 bottom: 0;}
 
 div::-webkit-scrollbar{
@@ -188,3 +188,14 @@ border-radius: 25px;
 .epic{background-color: rgb(200, 0, 185, 1);}
 .leg{background-color: rgb(255, 255, 0, 0.8);}
 .custom{background-color: rgb(255, 205, 0, 1);}
+
+.skinsBtn{border-radius: 10px;
+border-color: rgb(100, 100, 100, 1)
+border-width: 5px;
+height: 60px;
+width: 45%;
+background-color: rgba(30, 30, 30, 1);
+font-size: 150%;
+margin-bottom: 20px;
+color: rgb(100, 100, 100, 1);
+}
