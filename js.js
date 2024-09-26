@@ -206,6 +206,7 @@ function toSkins(){
     document.getElementById("skinsBtn").style.backgroundImage = 'url("img/IconsBottom/skinsWhite.png")';
     document.getElementById("skins").style.display = "block";
     document.getElementById("scroll").style.overflowY = "scroll";
+    bogdanSkins()
 }
 function toFriends(){
     document.getElementById("finger").style.display = "none";
@@ -889,6 +890,26 @@ function wtfSkintap(){
 }
 
 
+
+
+
+
+
+
+
+function bogdanSkins(){
+    document.getElementById("bogdanSkinsBtn").style.color = "#fff";
+    document.getElementById("customSkinsBtn").style.color = "#646464";
+    document.getElementById("bogdanSkins").style.display = "block";
+    document.getElementById("customSkins").style.display = "none";
+
+}
+function customSkins(){
+    document.getElementById("customSkinsBtn").style.color = "#fff";
+    document.getElementById("bogdanSkinsBtn").style.color = "#646464";
+    document.getElementById("customSkins").style.display = "block";
+    document.getElementById("bogdanSkins").style.display = "none";
+}
 
 
 
