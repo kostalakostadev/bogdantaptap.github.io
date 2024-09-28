@@ -1,3 +1,8 @@
+const preloadImage = src => (new Image().src = src);
+['img/ForCases/bogdanCase.png', 'img/ForCases/customCase.png', 'img/ForCases/camonFon.jpg', 'img/ForCases/epicFon.jpg', 'img/ForCases/mifFon.jpg', 'img/ForCases/legFon.jpg', 'img/IconsBottom/caseGrey.png', 'img/IconsBottom/caseWhite.png', 'img/IconsBottom/dropGrey.png', 'img/IconsBottom/dropWhite.png', 'img/IconsBottom/homeGrey.png', 'img/IconsBottom/homeWhite.png', 'img/IconsBottom/mineGrey.png', 'img/IconsBottom/mineWhite.png', 'img/IconsBottom/skinsGrey.png', 'img/IconsBottom/skinsWhite.png', 'img/Mine/anapaMine.jpeg', 'img/Mine/gnomMine.jpeg', 'img/Mine/terMine.jpeg', 'img/Mine/eatsMine.jpg', 'img/Mine/grandMine.jpg', 'img/Mine/halatMine.jpg', 'img/Mine/krapivaMine.jpg', 'img/Mine/melonMine.jpg', 'img/Mine/mumMine.jpg', 'img/Mine/stolbMine.jpg', 'img/Mine/mumMine.jpg', 'img/More/one.png', 'img/More/two.png', 'img/More/four.png', 'img/More/eight.png', 'img/More/sixteen.png', 'img/More/32.png', 'img/More/64.png', 'img/Skins/classic.png', 'img/Skins/depresCamon.png', 'img/Skins/trendyCamon.png', 'img/Skins/gnevEpic.png', 'img/Skins/iEpic.png', 'img/Skins/krestEpic.png', 'img/Skins/norelaxEpic.png', 'img/Skins/noseyEpic.png', 'img/Skins/svoEpic.png', 'img/Skins/coolLeg.png', 'img/Skins/finsniperLeg.png', 'img/Skins/gulLeg.png', 'img/Skins/stickLeg.png', 'img/Skins/winterLeg.png', 'img/Skins/wtfLeg.png'].forEach(preloadImage);
+
+
+
 let values = 100;
 let hour = 0;
 let fingerlvl = 1;
@@ -59,6 +64,7 @@ document.onselectstart = noselect;
 document.oncontextmenu = noselect;
 function noselect() {return false;}
 
+let clickBtnNone = false;
 
 function tap(){
     values=values+fingerlvl;
@@ -105,7 +111,7 @@ function fingers(){
     else if (fingerlvl==8){
         if (values>=50000){
             document.getElementById("fingers").innerText = "Стоит: 200000";
-            document.getElementById("fingerimg").src = 'img/More/sixteen.jpg';
+            document.getElementById("fingerimg").src = 'img/More/sixteen.png';
             values = values - 50000;
             fingerlvl = 16;
             document.getElementById("value").innerText = values;
@@ -115,7 +121,7 @@ function fingers(){
     else if (fingerlvl==16){
         if (values>=200000){
             document.getElementById("fingers").innerText = "Стоит: 500000";
-            document.getElementById("fingerimg").src = 'img/More/32.jpg';
+            document.getElementById("fingerimg").src = 'img/More/32.png';
             values = values - 200000;
             fingerlvl = 32;
             document.getElementById("value").innerText = values;
@@ -125,7 +131,7 @@ function fingers(){
     else if (fingerlvl==32){
         if (values>=500000){
             document.getElementById("fingers").innerText = "Максимум!";
-            document.getElementById("fingerimg").src = 'img/More/64.jpg';
+            document.getElementById("fingerimg").src = 'img/More/64.png';
             values = values - 500000;
             fingerlvl = 64;
             document.getElementById("value").innerText = values;
@@ -144,15 +150,15 @@ function toTap(){
     document.getElementById("finger").style.display = "none";
     document.getElementById("cards").style.display = "none";
     document.getElementById("skins").style.display = "none";
-    document.getElementById("friends").style.display = "none";
+    document.getElementById("cases").style.display = "none";
     document.getElementById("drop").style.display = "none";
 
     document.getElementById("mineBtn").style.backgroundImage = 'url("img/IconsBottom/mineGrey.png")';
     document.getElementById("mineBtn").style.color = "#646464";
     document.getElementById("skinsBtn").style.backgroundImage = 'url("img/IconsBottom/skinsGrey.png")';
     document.getElementById("skinsBtn").style.color = "#646464";
-    document.getElementById("friendsBtn").style.backgroundImage = 'url("img/IconsBottom/friendsGrey.png")';
-    document.getElementById("friendsBtn").style.color = "#646464";
+    document.getElementById("casesBtn").style.backgroundImage = 'url("img/IconsBottom/caseGrey.png")';
+    document.getElementById("casesBtn").style.color = "#646464";
     document.getElementById("dropBtn").style.backgroundImage = 'url("img/IconsBottom/dropGrey.png")';
     document.getElementById("dropBtn").style.color = "#646464";
 
@@ -161,21 +167,23 @@ function toTap(){
     document.getElementById("tapBtn").style.backgroundImage = 'url("img/IconsBottom/homeWhite.png")';
     document.getElementById("taptap").style.display = "block";
     document.getElementById("scroll").style.overflowY = "hidden";
+    document.getElementById("cruchu").style.display = "none";
+    document.getElementById("para").style.display = "none";
 
 }
 function toMine(){
     document.getElementById("finger").style.display = "block";
     document.getElementById("taptap").style.display = "none";
     document.getElementById("skins").style.display = "none";
-    document.getElementById("friends").style.display = "none";
+    document.getElementById("cases").style.display = "none";
     document.getElementById("drop").style.display = "none";
 
     document.getElementById("tapBtn").style.backgroundImage = 'url("img/IconsBottom/homeGrey.png")';
     document.getElementById("tapBtn").style.color = "#646464";
     document.getElementById("skinsBtn").style.backgroundImage = 'url("img/IconsBottom/skinsGrey.png")';
     document.getElementById("skinsBtn").style.color = "#646464";
-    document.getElementById("friendsBtn").style.backgroundImage = 'url("img/IconsBottom/friendsGrey.png")';
-    document.getElementById("friendsBtn").style.color = "#646464";
+    document.getElementById("casesBtn").style.backgroundImage = 'url("img/IconsBottom/caseGrey.png")';
+    document.getElementById("casesBtn").style.color = "#646464";
     document.getElementById("dropBtn").style.backgroundImage = 'url("img/IconsBottom/dropGrey.png")';
     document.getElementById("dropBtn").style.color = "#646464";
 
@@ -184,11 +192,13 @@ function toMine(){
     document.getElementById("mineBtn").style.backgroundImage = 'url("img/IconsBottom/mineWhite.png")';
     document.getElementById("cards").style.display = "block";
     document.getElementById("scroll").style.overflowY = "scroll";
+    document.getElementById("cruchu").style.display = "none";
+    document.getElementById("para").style.display = "none";
 }
 function toSkins(){
     document.getElementById("finger").style.display = "none";
     document.getElementById("taptap").style.display = "none";
-    document.getElementById("friends").style.display = "none";
+    document.getElementById("cases").style.display = "none";
     document.getElementById("cards").style.display = "none";
     document.getElementById("drop").style.display = "none";
 
@@ -196,8 +206,8 @@ function toSkins(){
     document.getElementById("tapBtn").style.color = "#646464";
     document.getElementById("mineBtn").style.backgroundImage = 'url("img/IconsBottom/mineGrey.png")';
     document.getElementById("mineBtn").style.color = "#646464";
-    document.getElementById("friendsBtn").style.backgroundImage = 'url("img/IconsBottom/friendsGrey.png")';
-    document.getElementById("friendsBtn").style.color = "#646464";
+    document.getElementById("casesBtn").style.backgroundImage = 'url("img/IconsBottom/caseGrey.png")';
+    document.getElementById("casesBtn").style.color = "#646464";
     document.getElementById("dropBtn").style.backgroundImage = 'url("img/IconsBottom/dropGrey.png")';
     document.getElementById("dropBtn").style.color = "#646464";
 
@@ -206,9 +216,11 @@ function toSkins(){
     document.getElementById("skinsBtn").style.backgroundImage = 'url("img/IconsBottom/skinsWhite.png")';
     document.getElementById("skins").style.display = "block";
     document.getElementById("scroll").style.overflowY = "scroll";
+    document.getElementById("cruchu").style.display = "none";
+    document.getElementById("para").style.display = "none";
     bogdanSkins()
 }
-function toFriends(){
+function toCases(){
     document.getElementById("finger").style.display = "none";
     document.getElementById("taptap").style.display = "none";
     document.getElementById("skins").style.display = "none";
@@ -225,9 +237,9 @@ function toFriends(){
     document.getElementById("dropBtn").style.color = "#646464";
 
 
-    document.getElementById("friendsBtn").style.color = "#ffffff";
-    document.getElementById("friendsBtn").style.backgroundImage = 'url("img/IconsBottom/friendsWhite.png")';
-    document.getElementById("friends").style.display = "block";
+    document.getElementById("casesBtn").style.color = "#ffffff";
+    document.getElementById("casesBtn").style.backgroundImage = 'url("img/IconsBottom/caseWhite.png")';
+    document.getElementById("cases").style.display = "block";
     document.getElementById("scroll").style.overflowY = "hidden";
 }
 function toDrop(){
@@ -235,7 +247,7 @@ function toDrop(){
     document.getElementById("taptap").style.display = "none";
     document.getElementById("skins").style.display = "none";
     document.getElementById("cards").style.display = "none";
-    document.getElementById("friends").style.display = "none";
+    document.getElementById("cases").style.display = "none";
 
     document.getElementById("tapBtn").style.backgroundImage = 'url("img/IconsBottom/homeGrey.png")';
     document.getElementById("tapBtn").style.color = "#646464";
@@ -243,14 +255,16 @@ function toDrop(){
     document.getElementById("mineBtn").style.color = "#646464";
     document.getElementById("skinsBtn").style.backgroundImage = 'url("img/IconsBottom/skinsGrey.png")';
     document.getElementById("skinsBtn").style.color = "#646464";
-    document.getElementById("friendsBtn").style.backgroundImage = 'url("img/IconsBottom/friendsGrey.png")';
-    document.getElementById("friendsBtn").style.color = "#646464";
+    document.getElementById("casesBtn").style.backgroundImage = 'url("img/IconsBottom/caseGrey.png")';
+    document.getElementById("casesBtn").style.color = "#646464";
 
 
     document.getElementById("dropBtn").style.color = "#ffffff";
     document.getElementById("dropBtn").style.backgroundImage = 'url("img/IconsBottom/dropWhite.png")';
     document.getElementById("drop").style.display = "block";
     document.getElementById("scroll").style.overflowY = "hidden";
+    document.getElementById("cruchu").style.display = "none";
+    document.getElementById("para").style.display = "none";
 }
 
 
@@ -467,20 +481,27 @@ function classicSkintap(){
     }
     document.getElementById('tapBtn').click();
 
+
 }
 
 function depresSkintap(){
     if (depresSkin==false){
-        if (values>=10000){
-            values=values-10000;
+        if (values>=50000){
+            values=values-50000;
             document.getElementById("value").innerText = values;
             depresSkin = true;
             document.getElementById("depresSkinText").innerText = "Используется";
             document.getElementById("depresSkin").style.borderColor = "green";
             document.getElementById(skin).innerText = "Есть";
-            document.getElementById("btap").style.backgroundImage = "url('img/Skins/depressiveCamon.png')";
+            document.getElementById("btap").style.backgroundImage = "url('img/Skins/depresCamon.png')";
             skin = "depresSkinText";
-        document.getElementById('tapBtn').click();
+            if (clickBtnNone==false){
+                document.getElementById('tapBtn').click();
+            }
+            else{
+                clickBtnNone = false;
+            }
+
         }
         else{
             tg.showAlert("У вас недостаточно БогданКоина");
@@ -490,27 +511,40 @@ function depresSkintap(){
     else{
         document.getElementById("depresSkinText").innerText = "Используется";
         document.getElementById("depresSkin").style.borderColor = "green";
-        document.getElementById("btap").style.backgroundImage = "url('img/Skins/depressiveCamon.png')";
+        document.getElementById("btap").style.backgroundImage = "url('img/Skins/depresCamon.png')";
         if (skin!="depresSkinText"){
             document.getElementById(skin).innerText = "Есть";
             skin = "depresSkinText";
         }
-        document.getElementById('tapBtn').click();
+        if (clickBtnNone==false){
+            document.getElementById('tapBtn').click();
+        }
+        else{
+            clickBtnNone = false;
+            values = values + 5000
+        }
+
     }
 }
 
 function trendySkintap(){
     if (trendySkin==false){
-        if (values>=15000){
-            values=values-15000;
+        if (values>=50000){
+            values=values-50000;
             document.getElementById("value").innerText = values;
             trendySkin = true;
             document.getElementById("trendySkinText").innerText = "Используется";
             document.getElementById("trendySkin").style.borderColor = "green";
             document.getElementById(skin).innerText = "Есть";
-            document.getElementById("btap").style.backgroundImage = "url('img/Skins/trandyCamon.png')";
+            document.getElementById("btap").style.backgroundImage = "url('img/Skins/trendyCamon.png')";
             skin = "trendySkinText";
-        document.getElementById('tapBtn').click();
+            if (clickBtnNone==false){
+                document.getElementById('tapBtn').click();
+            }
+            else{
+                clickBtnNone = false;
+            }
+
         }
         else{
             tg.showAlert("У вас недостаточно БогданКоина");
@@ -520,27 +554,40 @@ function trendySkintap(){
     else{
         document.getElementById("trendySkinText").innerText = "Используется";
         document.getElementById("trendySkin").style.borderColor = "green";
-        document.getElementById("btap").style.backgroundImage = "url('img/Skins/trandyCamon.png')";
+        document.getElementById("btap").style.backgroundImage = "url('img/Skins/trendyCamon.png')";
         if (skin!="trendySkinText"){
             document.getElementById(skin).innerText = "Есть";
             skin = "trendySkinText";
         }
-        document.getElementById('tapBtn').click();
+        if (clickBtnNone==false){
+            document.getElementById('tapBtn').click();
+        }
+        else{
+            clickBtnNone = false;
+            values = values + 5000
+        }
+
     }
 }
 
 function gnevSkintap(){
     if (gnevSkin==false){
-        if (values>=20000){
-            values=values-20000;
+        if (values>=75000){
+            values=values-75000;
             document.getElementById("value").innerText = values;
             gnevSkin = true;
             document.getElementById("gnevSkinText").innerText = "Используется";
             document.getElementById("gnevSkin").style.borderColor = "green";
             document.getElementById(skin).innerText = "Есть";
-            document.getElementById("btap").style.backgroundImage = "url('img/Skins/angerEpic.png')";
+            document.getElementById("btap").style.backgroundImage = "url('img/Skins/gnevEpic.png')";
             skin = "gnevSkinText";
-        document.getElementById('tapBtn').click();
+            if (clickBtnNone==false){
+                document.getElementById('tapBtn').click();
+            }
+            else{
+                clickBtnNone = false;
+            }
+
         }
         else{
             tg.showAlert("У вас недостаточно БогданКоина");
@@ -550,27 +597,40 @@ function gnevSkintap(){
     else{
         document.getElementById("gnevSkinText").innerText = "Используется";
         document.getElementById("gnevSkin").style.borderColor = "green";
-        document.getElementById("btap").style.backgroundImage = "url('img/Skins/angerEpic.png')";
+        document.getElementById("btap").style.backgroundImage = "url('img/Skins/gnevEpic.png')";
         if (skin!="gnevSkinText"){
             document.getElementById(skin).innerText = "Есть";
             skin = "gnevSkinText";
         }
-        document.getElementById('tapBtn').click();
+        if (clickBtnNone==false){
+            document.getElementById('tapBtn').click();
+        }
+        else{
+            clickBtnNone = false;
+            values = values + 7500
+        }
+
     }
 }
 
 function iSkintap(){
     if (iSkin==false){
-        if (values>=20000){
-            values=values-20000;
+        if (values>=75000){
+            values=values-75000;
             document.getElementById("value").innerText = values;
             iSkin = true;
             document.getElementById("iSkinText").innerText = "Используется";
             document.getElementById("iSkin").style.borderColor = "green";
             document.getElementById(skin).innerText = "Есть";
-            document.getElementById("btap").style.backgroundImage = "url('img/Skins/iBogdanEpic.png')";
+            document.getElementById("btap").style.backgroundImage = "url('img/Skins/iEpic.png')";
             skin = "iSkinText";
-        document.getElementById('tapBtn').click();
+            if (clickBtnNone==false){
+                document.getElementById('tapBtn').click();
+            }
+            else{
+                clickBtnNone = false;
+            }
+
         }
         else{
             tg.showAlert("У вас недостаточно БогданКоина");
@@ -580,19 +640,26 @@ function iSkintap(){
     else{
         document.getElementById("iSkinText").innerText = "Используется";
         document.getElementById("iSkin").style.borderColor = "green";
-        document.getElementById("btap").style.backgroundImage = "url('img/Skins/iBogdanEpic.png')";
+        document.getElementById("btap").style.backgroundImage = "url('img/Skins/iEpic.png')";
         if (skin!="iSkinText"){
             document.getElementById(skin).innerText = "Есть";
             skin = "iSkinText";
         }
-        document.getElementById('tapBtn').click();
+        if (clickBtnNone==false){
+            document.getElementById('tapBtn').click();
+        }
+        else{
+            clickBtnNone = false;
+            values = values + 7500
+        }
+
     }
 }
 
 function krestSkintap(){
     if (krestSkin==false){
-        if (values>=20000){
-            values=values-20000;
+        if (values>=75000){
+            values=values-75000;
             document.getElementById("value").innerText = values;
             krestSkin = true;
             document.getElementById("krestSkinText").innerText = "Используется";
@@ -600,7 +667,13 @@ function krestSkintap(){
             document.getElementById(skin).innerText = "Есть";
             document.getElementById("btap").style.backgroundImage = "url('img/Skins/krestEpic.png')";
             skin = "krestSkinText";
-        document.getElementById('tapBtn').click();
+            if (clickBtnNone==false){
+                document.getElementById('tapBtn').click();
+            }
+            else{
+                clickBtnNone = false;
+            }
+
         }
         else{
             tg.showAlert("У вас недостаточно БогданКоина");
@@ -615,14 +688,21 @@ function krestSkintap(){
             document.getElementById(skin).innerText = "Есть";
             skin = "krestSkinText";
         }
-        document.getElementById('tapBtn').click();
+        if (clickBtnNone==false){
+            document.getElementById('tapBtn').click();
+        }
+        else{
+            clickBtnNone = false;
+            values = values + 7500
+        }
+
     }
 }
 
 function norelaxSkintap(){
     if (norelaxSkin==false){
-        if (values>=20000){
-            values=values-20000;
+        if (values>=75000){
+            values=values-75000;
             document.getElementById("value").innerText = values;
             norelaxSkin = true;
             document.getElementById("norelaxSkinText").innerText = "Используется";
@@ -630,7 +710,13 @@ function norelaxSkintap(){
             document.getElementById(skin).innerText = "Есть";
             document.getElementById("btap").style.backgroundImage = "url('img/Skins/norelaxEpic.png')";
             skin = "norelaxSkinText";
-        document.getElementById('tapBtn').click();
+            if (clickBtnNone==false){
+                document.getElementById('tapBtn').click();
+            }
+            else{
+                clickBtnNone = false;
+            }
+
         }
         else{
             tg.showAlert("У вас недостаточно БогданКоина");
@@ -645,14 +731,21 @@ function norelaxSkintap(){
             document.getElementById(skin).innerText = "Есть";
             skin = "norelaxSkinText";
         }
-        document.getElementById('tapBtn').click();
+        if (clickBtnNone==false){
+            document.getElementById('tapBtn').click();
+        }
+        else{
+            clickBtnNone = false;
+            values = values + 7500
+        }
+
     }
 }
 
 function noseySkintap(){
     if (noseySkin==false){
-        if (values>=20000){
-            values=values-20000;
+        if (values>=75000){
+            values=values-75000;
             document.getElementById("value").innerText = values;
             noseySkin = true;
             document.getElementById("noseySkinText").innerText = "Используется";
@@ -660,7 +753,13 @@ function noseySkintap(){
             document.getElementById(skin).innerText = "Есть";
             document.getElementById("btap").style.backgroundImage = "url('img/Skins/noseyEpic.png')";
             skin = "noseySkinText";
-            document.getElementById('tapBtn').click();
+            if (clickBtnNone==false){
+                document.getElementById('tapBtn').click();
+            }
+            else{
+                clickBtnNone = false;
+            }
+
         }
         else{
             tg.showAlert("У вас недостаточно БогданКоина");
@@ -675,14 +774,21 @@ function noseySkintap(){
             document.getElementById(skin).innerText = "Есть";
             skin = "noseySkinText";
         }
-        document.getElementById('tapBtn').click();
+        if (clickBtnNone==false){
+            document.getElementById('tapBtn').click();
+        }
+        else{
+            clickBtnNone = false;
+            values = values + 7500
+        }
+
     }
 }
 
 function svoSkintap(){
     if (svoSkin==false){
-        if (values>=20000){
-            values=values-20000;
+        if (values>=75000){
+            values=values-75000;
             document.getElementById("value").innerText = values;
             svoSkin = true;
             document.getElementById("svoSkinText").innerText = "Используется";
@@ -690,7 +796,13 @@ function svoSkintap(){
             document.getElementById(skin).innerText = "Есть";
             document.getElementById("btap").style.backgroundImage = "url('img/Skins/svoEpic.png')";
             skin = "svoSkinText";
-        document.getElementById('tapBtn').click();
+            if (clickBtnNone==false){
+                document.getElementById('tapBtn').click();
+            }
+            else{
+                clickBtnNone = false;
+            }
+
         }
         else{
             tg.showAlert("У вас недостаточно БогданКоина");
@@ -705,14 +817,21 @@ function svoSkintap(){
             document.getElementById(skin).innerText = "Есть";
             skin = "svoSkinText";
         }
-        document.getElementById('tapBtn').click();
+        if (clickBtnNone==false){
+            document.getElementById('tapBtn').click();
+        }
+        else{
+            clickBtnNone = false;
+            values = values + 7500
+        }
+
     }
 }
 
 function coolSkintap(){
     if (coolSkin==false){
-        if (values>=50000){
-            values=values-50000;
+        if (values>=500000){
+            values=values-500000;
             document.getElementById("value").innerText = values;
             coolSkin = true;
             document.getElementById("coolSkinText").innerText = "Используется";
@@ -720,7 +839,13 @@ function coolSkintap(){
             document.getElementById(skin).innerText = "Есть";
             document.getElementById("btap").style.backgroundImage = "url('img/Skins/coolLeg.png')";
             skin = "coolSkinText";
-        document.getElementById('tapBtn').click();
+            if (clickBtnNone==false){
+                document.getElementById('tapBtn').click();
+            }
+            else{
+                clickBtnNone = false;
+            }
+
         }
         else{
             tg.showAlert("У вас недостаточно БогданКоина");
@@ -735,14 +860,21 @@ function coolSkintap(){
             document.getElementById(skin).innerText = "Есть";
             skin = "coolSkinText";
         }
-        document.getElementById('tapBtn').click();
+        if (clickBtnNone==false){
+            document.getElementById('tapBtn').click();
+        }
+        else{
+            clickBtnNone = false;
+            values = values + 50000
+        }
+
     }
 }
 
 function finsniperSkintap(){
     if (finsniperSkin==false){
-        if (values>=50000){
-            values=values-50000;
+        if (values>=500000){
+            values=values-500000;
             document.getElementById("value").innerText = values;
             finsniperSkin = true;
             document.getElementById("finsniperSkinText").innerText = "Используется";
@@ -750,7 +882,13 @@ function finsniperSkintap(){
             document.getElementById(skin).innerText = "Есть";
             document.getElementById("btap").style.backgroundImage = "url('img/Skins/finsniperLeg.png')";
             skin = "finsniperSkinText";
-        document.getElementById('tapBtn').click();
+            if (clickBtnNone==false){
+                document.getElementById('tapBtn').click();
+            }
+            else{
+                clickBtnNone = false;
+            }
+
         }
         else{
             tg.showAlert("У вас недостаточно БогданКоина");
@@ -765,14 +903,21 @@ function finsniperSkintap(){
             document.getElementById(skin).innerText = "Есть";
             skin = "finsniperSkinText";
         }
-        document.getElementById('tapBtn').click();
+        if (clickBtnNone==false){
+            document.getElementById('tapBtn').click();
+        }
+        else{
+            clickBtnNone = false;
+            values = values + 50000
+        }
+
     }
 }
 
 function gulSkintap(){
     if (gulSkin==false){
-        if (values>=50000){
-            values=values-50000;
+        if (values>=500000){
+            values=values-500000;
             document.getElementById("value").innerText = values;
             gulSkin = true;
             document.getElementById("gulSkinText").innerText = "Используется";
@@ -780,7 +925,13 @@ function gulSkintap(){
             document.getElementById(skin).innerText = "Есть";
             document.getElementById("btap").style.backgroundImage = "url('img/Skins/gulLeg.png')";
             skin = "gulSkinText";
-        document.getElementById('tapBtn').click();
+            if (clickBtnNone==false){
+                document.getElementById('tapBtn').click();
+            }
+            else{
+                clickBtnNone = false;
+            }
+
         }
         else{
             tg.showAlert("У вас недостаточно БогданКоина");
@@ -795,13 +946,20 @@ function gulSkintap(){
             document.getElementById(skin).innerText = "Есть";
             skin = "gulSkinText";
         }
-        document.getElementById('tapBtn').click();
+        if (clickBtnNone==false){
+            document.getElementById('tapBtn').click();
+        }
+        else{
+            clickBtnNone = false;
+            values = values + 50000
+        }
+
     }
 }
 
 function stickSkintap(){
     if (stickSkin==false){
-        if (values>=50000){
+        if (values>=500000){
             values=values-50000;
             document.getElementById("value").innerText = values;
             stickSkin = true;
@@ -810,7 +968,13 @@ function stickSkintap(){
             document.getElementById(skin).innerText = "Есть";
             document.getElementById("btap").style.backgroundImage = "url('img/Skins/stickLeg.png')";
             skin = "stickSkinText";
-        document.getElementById('tapBtn').click();
+            if (clickBtnNone==false){
+                document.getElementById('tapBtn').click();
+            }
+            else{
+                clickBtnNone = false;
+            }
+
         }
         else{
             tg.showAlert("У вас недостаточно БогданКоина");
@@ -825,14 +989,21 @@ function stickSkintap(){
             document.getElementById(skin).innerText = "Есть";
             skin = "stickSkinText";
         }
-        document.getElementById('tapBtn').click();
+        if (clickBtnNone==false){
+            document.getElementById('tapBtn').click();
+        }
+        else{
+            clickBtnNone = false;
+            values = values + 50000
+        }
+
     }
 }
 
 function winterSkintap(){
     if (winterSkin==false){
-        if (values>=50000){
-            values=values-50000;
+        if (values>=500000){
+            values=values-500000;
             document.getElementById("value").innerText = values;
             winterSkin = true;
             document.getElementById("winterSkinText").innerText = "Используется";
@@ -840,7 +1011,13 @@ function winterSkintap(){
             document.getElementById(skin).innerText = "Есть";
             document.getElementById("btap").style.backgroundImage = "url('img/Skins/winterLeg.png')";
             skin = "winterSkinText";
-        document.getElementById('tapBtn').click();
+            if (clickBtnNone==false){
+                document.getElementById('tapBtn').click();
+            }
+            else{
+                clickBtnNone = false;
+            }
+
         }
         else{
             tg.showAlert("У вас недостаточно БогданКоина");
@@ -855,14 +1032,21 @@ function winterSkintap(){
             document.getElementById(skin).innerText = "Есть";
             skin = "dwinterSkinText";
         }
-        document.getElementById('tapBtn').click();
+        if (clickBtnNone==false){
+            document.getElementById('tapBtn').click();
+        }
+        else{
+            clickBtnNone = false;
+            values = values + 50000
+        }
+
     }
 }
 
 function wtfSkintap(){
     if (wtfSkin==false){
-        if (values>=100000){
-            values=values-100000;
+        if (values>=1000000){
+            values=values-1000000;
             document.getElementById("value").innerText = values;
             wtfSkin = true;
             document.getElementById("wtfSkinText").innerText = "Используется";
@@ -870,7 +1054,13 @@ function wtfSkintap(){
             document.getElementById(skin).innerText = "Есть";
             document.getElementById("btap").style.backgroundImage = "url('img/Skins/wtfLeg.png')";
             skin = "wtfSkinText";
-        document.getElementById('tapBtn').click();
+            if (clickBtnNone==false){
+                document.getElementById('tapBtn').click();
+            }
+            else{
+                clickBtnNone = false;
+            }
+
         }
         else{
             tg.showAlert("У вас недостаточно БогданКоина");
@@ -885,12 +1075,15 @@ function wtfSkintap(){
             document.getElementById(skin).innerText = "Есть";
             skin = "wtfSkinText";
         }
-        document.getElementById('tapBtn').click();
+        if (clickBtnNone==false){
+            document.getElementById('tapBtn').click();
+        }
+        else{
+            clickBtnNone = false;
+            values = values + 100000
+        }
     }
 }
-
-
-
 
 
 
@@ -912,6 +1105,125 @@ function customSkins(){
 }
 
 
+
+function restartanim(){
+    document.getElementById("cruchu").style.display = "block";
+}
+function fonye(fonc){
+    document.getElementById("cruchu").style.backgroundColor = fonc;
+}
+function parandfon(fon){
+    document.getElementById("para").style.display = "block";
+    document.getElementById("cruchu").style.backgroundImage = fon;
+}
+function bogdanCase(){
+    if (values>=100000){
+        document.getElementById("bogdanCase").disabled = true;
+        setTimeout(function() { document.getElementById("bogdanCase").disabled = false }, 3500);
+        document.getElementById("customCase").disabled = true;
+        setTimeout(function() { document.getElementById("customCase").disabled = false }, 3500);
+        document.getElementById("cruchu").style.backgroundColor = "blue";
+        document.getElementById("cruchu").style.backgroundImage = "none";
+        document.getElementById("para").style.display = "none";
+        let number = Math.ceil(Math.random()*100);
+        let rare;
+        let skins;
+        let lenq;
+        let coins;
+        let fon;
+        let names = {depres: "Депрессивный", trendy: "Модный", svo: "СВО", nosey: "Носатик", norelax: "Напряженный", krest: "Крестьянин", i: "iBogdan", gnev: "Это не просто гнев", winter: "Зимний", stick: "С палочкой", gul: "Гуль", finsniper: "Финский снайпер", cool: "Крутой",};
+        let opises = {depres: "Отобрали телефон", trendy: "Стал модным", svo: "Какой хороший день...", nosey: "Носатик", norelax: "напрягся...", krest: "Эта рубашка просто имба", i: "Apple или Ньютон", gnev: "...то что живёт во мне", winter: "А меня мама, тепло одела", stick: "Крутой", gul: "Стал дединсайдом", finsniper: "Деловой и точка", cool: "Легенда Найт-Сити",};
+        if (number<=50){
+            rare = "Camon";
+            skins = ["depres", "trendy"];
+            lenq = 2;
+            coins = 50000;
+            fon = "url('img/ForCases/camonFon.jpg')";
+            fonc = '#e8e8e8';
+        }
+        else if (number>=51 && number<=90){
+            rare = "Epic";
+            skins = ["svo", "nosey", "norelax", "krest", "i", "gnev"];
+            lenq = 6;
+            coins = 75000;
+            fon = "url('img/ForCases/epicFon.jpg')";
+            fonc = "#fe69f7";
+        }
+        else {
+            rare = "Leg";
+            skins = ["winter", "stick", "gul", "finsniper", "cool"];
+            lenq = 5;
+            coins = 500000;
+            fon = "url('img/ForCases/legFon.jpg')";
+            fonc = "#fefe00";
+        }
+        let skin = skins[Math.floor(Math.random() * lenq)];
+        let skinimg = "img/Skins/"+skin+rare+".png";
+        document.getElementById("bogdan").src = skinimg;
+        document.getElementById("nameSkins").innerText = names[skin];
+        document.getElementById("opisSkins").innerText = opises[skin];
+        switch (skin){
+            case "depres":
+                document.getElementById("nameSkins").style.fontSize = "24px";
+                break;
+            case "gnev":
+                document.getElementById("nameSkins").style.fontSize = "18px";
+                break;
+            case "finsniper":
+                document.getElementById("nameSkins").style.fontSize = "20px";
+                break;
+            default:
+                document.getElementById("nameSkins").style.fontSize = "25px";
+        }
+        values=values-100000;
+        document.getElementById("cruchu").style.display = "none";
+        clickBtnNone = true;
+        values = values + coins;
+        skinS = skin + "Skin";
+        document.getElementById(skinS).click();
+        setTimeout(restartanim, 1);
+        setTimeout(fonye, 2000, fonc);
+        setTimeout(parandfon, 3000, fon);
+    }
+    else{
+        tg.showAlert("У вас недостаточно БогданКоина");
+    }
+}
+function customCase(){
+    if (values>=150000){
+        let number = Math.ceil(Math.random()*100);
+        if (number>=10){
+            tg.showAlert("Не повезло...")
+        }
+        else{
+            document.getElementById("bogdanCase").disabled = true;
+            setTimeout(function() { document.getElementById("bogdanCase").disabled = false }, 3500);
+            document.getElementById("customCase").disabled = true;
+            setTimeout(function() { document.getElementById("customCase").disabled = false }, 3500);
+            document.getElementById("cruchu").style.backgroundColor = "blue";
+            document.getElementById("cruchu").style.backgroundImage = "none";
+            document.getElementById("para").style.display = "none";
+            let skinimg = "img/Skins/wtfLeg.png";
+            document.getElementById("bogdan").src = skinimg;
+            document.getElementById("nameSkins").innerText = "Wtf";
+            document.getElementById("opisSkins").innerText = "Фак...";
+
+            values=values-150000;
+            document.getElementById("cruchu").style.display = "none";
+            clickBtnNone = true;
+            skinS = skin + "Skin";
+            document.getElementById("wtfSkin").click();
+            setTimeout(restartanim, 1);
+            fon = "url('img/ForCases/mifFon.jpg')";
+            fonc = "#fe3a3b";
+            setTimeout(fonye, 2000, fonc);
+            setTimeout(parandfon, 3000, fon);
+        }
+    }
+    else{
+        tg.showAlert("У вас недостаточно БогданКоина");
+    }
+}
 
 
 
