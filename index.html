@@ -3,12 +3,12 @@
 	<head>
 		<script src="https://telegram.org/js/telegram-web-app.js"></script>
 		<script src="./js.js"></script>
-		<link type="text/css" href="style.css?<?php echo time();?>" rel="stylesheet"/>
 		<meta charset="UTF-8">
 		<meta name="viewport"
 			  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>BogdanCoin</title>
+		<link type="text/css" href="style.css?<?php echo time();?>" rel="stylesheet"/>
 	</head>
 	<body oncopy="return false">
 		<div class="blocksTop">
@@ -18,7 +18,7 @@
 
 
 		<div id="mainBlocks">
-			<p id='value'>0</p>
+			<p id='value'>100</p>
 			<div id="scroll" style="overflow-y:hidden;">
 				<div id="taptap" >
 					<button onclick='tap()' id='btap'></button>
@@ -42,26 +42,34 @@
 					<button id="customSkinsBtn" onclick="customSkins()" class="skinsBtn">Кастом</button>
 					<div id="bogdanSkins">
 						<button class="skin camon" onclick='classicSkintap()' id='classicSkin' style="border-color: green;border-width: 5px;"><p>Классический</p><img src="img/Skins/classic.png"><p id="classicSkinText">Используется</p></button>
-						<button class="skin camon" onclick='depresSkintap()' id='depresSkin' style="border-color: red;border-width: 5px;"><p>Депрессивный</p><img src="img/Skins/depressiveCamon.png"><p id="depresSkinText">Стоит: 10000</p></button>
-						<button class="skin camon" onclick='trendySkintap()' id='trendySkin' style="border-color: red;border-width: 5px;"><p>Модный</p><img src="img/Skins/trandyCamon.png"><p id="trendySkinText">Стоит: 15000</p></button>
-						<button class="skin epic" onclick='gnevSkintap()' id='gnevSkin' style="border-color: red;border-width: 5px;"><p>Это не просто гнев</p><img src="img/Skins/angerEpic.png"><p id="gnevSkinText">Стоит: 20000</p></button>
-						<button class="skin epic" onclick='iSkintap()' id='iSkin' style="border-color: red;border-width: 5px;"><p>iBogdan</p><img src="img/Skins/iBogdanEpic.png"><p id="iSkinText">Стоит: 20000</p></button>
-						<button class="skin epic" onclick='krestSkintap()' id='krestSkin' style="border-color: red;border-width: 5px;"><p>Крестьянин</p><img src="img/Skins/krestEpic.png"><p id="krestSkinText">Стоит: 20000</p></button>
-						<button class="skin epic" onclick='norelaxSkintap()' id='norelaxSkin' style="border-color: red;border-width: 5px;"><p>Напряженный</p><img src="img/Skins/norelaxEpic.png"><p id="norelaxSkinText">Стоит: 20000</p></button>
-						<button class="skin epic" onclick='noseySkintap()' id='noseySkin' style="border-color: red;border-width: 5px;"><p>Носатик</p><img src="img/Skins/noseyEpic.png"><p id="noseySkinText">Стоит: 20000</p></button>
-						<button class="skin epic" onclick='svoSkintap()' id='svoSkin' style="border-color: red;border-width: 5px;"><p>СВО</p><img src="img/Skins/svoEpic.png"><p id="svoSkinText">Стоит: 20000</p></button>
-						<button class="skin leg" onclick='coolSkintap()' id='coolSkin' style="border-color: red;border-width: 5px;"><p>Крутой</p><img src="img/Skins/coolLeg.png"><p id="coolSkinText">Стоит: 50000</p></button>
-						<button class="skin leg" onclick='finsniperSkintap()' id='finsniperSkin' style="border-color: red;border-width: 5px;"><p>Финский снайпер</p><img src="img/Skins/finsniperLeg.png"><p id="finsniperSkinText">Стоит: 50000</p></button>
-						<button class="skin leg" onclick='gulSkintap()' id='gulSkin' style="border-color: red;border-width: 5px;"><p>Гуль</p><img src="img/Skins/gulLeg.png"><p id="gulSkinText">Стоит: 50000</p></button>
-						<button class="skin leg" onclick='stickSkintap()' id='stickSkin' style="border-color: red;border-width: 5px;"><p>С палочкой</p><img src="img/Skins/stickLeg.png"><p id="stickSkinText">Стоит: 50000</p></button>
-						<button class="skin leg" onclick='winterSkintap()' id='winterSkin' style="border-color: red;border-width: 5px;"><p>Зимний</p><img src="img/Skins/winterLeg.png"><p id="winterSkinText">Стоит: 50000</p></button>
+						<button class="skin camon" onclick='depresSkintap()' id='depresSkin' style="border-color: red;border-width: 5px;"><p>Депрессивный</p><img src="img/Skins/depresCamon.png"><p id="depresSkinText">Стоит: 50000</p></button>
+						<button class="skin camon" onclick='trendySkintap()' id='trendySkin' style="border-color: red;border-width: 5px;"><p>Модный</p><img src="img/Skins/trendyCamon.png"><p id="trendySkinText">Стоит: 50000</p></button>
+						<button class="skin epic" onclick='gnevSkintap()' id='gnevSkin' style="border-color: red;border-width: 5px;"><p>Это не просто гнев</p><img src="img/Skins/gnevEpic.png"><p id="gnevSkinText">Стоит: 75000</p></button>
+						<button class="skin epic" onclick='iSkintap()' id='iSkin' style="border-color: red;border-width: 5px;"><p>iBogdan</p><img src="img/Skins/iEpic.png"><p id="iSkinText">Стоит: 75000</p></button>
+						<button class="skin epic" onclick='krestSkintap()' id='krestSkin' style="border-color: red;border-width: 5px;"><p>Крестьянин</p><img src="img/Skins/krestEpic.png"><p id="krestSkinText">Стоит: 75000</p></button>
+						<button class="skin epic" onclick='norelaxSkintap()' id='norelaxSkin' style="border-color: red;border-width: 5px;"><p>Напряженный</p><img src="img/Skins/norelaxEpic.png"><p id="norelaxSkinText">Стоит: 75000</p></button>
+						<button class="skin epic" onclick='noseySkintap()' id='noseySkin' style="border-color: red;border-width: 5px;"><p>Носатик</p><img src="img/Skins/noseyEpic.png"><p id="noseySkinText">Стоит: 75000</p></button>
+						<button class="skin epic" onclick='svoSkintap()' id='svoSkin' style="border-color: red;border-width: 5px;"><p>СВО</p><img src="img/Skins/svoEpic.png"><p id="svoSkinText">Стоит: 75000</p></button>
+						<button class="skin leg" onclick='coolSkintap()' id='coolSkin' style="border-color: red;border-width: 5px;"><p>Крутой</p><img src="img/Skins/coolLeg.png"><p id="coolSkinText">Стоит: 500000</p></button>
+						<button class="skin leg" onclick='finsniperSkintap()' id='finsniperSkin' style="border-color: red;border-width: 5px;"><p>Финский снайпер</p><img src="img/Skins/finsniperLeg.png"><p id="finsniperSkinText">Стоит: 500000</p></button>
+						<button class="skin leg" onclick='gulSkintap()' id='gulSkin' style="border-color: red;border-width: 5px;"><p>Гуль</p><img src="img/Skins/gulLeg.png"><p id="gulSkinText">Стоит: 500000</p></button>
+						<button class="skin leg" onclick='stickSkintap()' id='stickSkin' style="border-color: red;border-width: 5px;"><p>С палочкой</p><img src="img/Skins/stickLeg.png"><p id="stickSkinText">Стоит: 500000</p></button>
+						<button class="skin leg" onclick='winterSkintap()' id='winterSkin' style="border-color: red;border-width: 5px;"><p>Зимний</p><img src="img/Skins/winterLeg.png"><p id="winterSkinText">Стоит: 500000</p></button>
 					</div>
 					<div id="customSkins" style="display:none;">
-						<button class="skin custom" onclick='wtfSkintap()' id='wtfSkin' style="border-color: red;border-width: 5px;"><p>WTF</p><img src="img/Skins/wtfLeg.png"><p id="wtfSkinText">Стоит: 100000</p></button>
+						<button class="skin custom" onclick='wtfSkintap()' id='wtfSkin' style="border-color: red;border-width: 5px;"><p>WTF</p><img src="img/Skins/wtfLeg.png"><p id="wtfSkinText">Стоит: 1000000</p></button>
 					</div>
 				</div>
-				<div id="friends" style="display:none;">
-					<p class="soon">Скоро...</p>
+				<div id="cases" style="display:none;">
+					<button class="case" id="bogdanCase" onclick="bogdanCase()"><p>Богдан Кейс</p><img src="img/ForCases/bogdanCase.png"><p style="font-size: 90%;">Cтоит: 100000</p></button>
+					<button class="case" id="customCase" onclick="customCase()"><p>Кастом Кейс</p><img src="img/ForCases/customCase.png"><p style="font-size: 90%;">Cтоит: 150000</p></button>
+				</div>
+				<div class="cruchu" style="display: none;" id="cruchu">
+					<img src="img/Skins/classic.png" class="bogdan" id="bogdan">
+					<div id="para">
+						<p id="nameSkins">Классический</p>
+						<p id="opisSkins">Самый обычный Богдан</p>
+					</div>
 				</div>
 				<div id="drop" style="display:none;">
 					<p class="soon">Скоро...</p>
@@ -75,7 +83,7 @@
 			<button onclick="toTap()" id="tapBtn"><br/><br/>⠀Тап⠀</button>
 			<button onclick="toMine()" id="mineBtn"><br/><br/>Бизнес</button>
 			<button onclick="toSkins()" id="skinsBtn"><br/><br/>Скины</button>
-			<button onclick="toFriends()" id="friendsBtn"><br/><br/>Друзья</button>
+			<button onclick="toCases()" id="casesBtn"><br/><br/>Кейсы</button>
 			<button onclick="toDrop()" id="dropBtn"><br/><br/>AirDrop</button>
 		</div>
 	</body>
